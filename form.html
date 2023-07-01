@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combate a Evasão Escolar</title>
+    <script src="javascript/form.js" defer></script>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+    <form action="index.html" method="post">
+        <div>
+            <button type="button" id="clearForm">Limpar Formulário</button>
+        </div>
+        <!--TODO: terminar formulário incluindo outros fatores-->
+        <div class="selectorWrapper">
+            Estado/Unidade Federativa:
+            <span class="dropdownValue">Selecione um Estado/Unidade Federativa</span>
+            <div id="federalUnitySelector" class="selector" style="display: none;">
+                <button type="button">FECHAR</button>
+                <input type="text" class="searchBox" placeholder="Pesquisar Unidade Federativa">
+                <span>Selecione um Estado/Unidade Federativa</span>
+                <div class="optionsGroup">
+                    <h4>Região Norte</h4>
+                    <label><input type="radio" name="UF" value="AC">AC - Acre</label>
+                    <label><input type="radio" name="UF" value="AP">AP - Amapá</label>
+                    <label><input type="radio" name="UF" value="AM">AM - Amazonas</label>
+                    <label><input type="radio" name="UF" value="PA">PA - Pará</label>
+                    <label><input type="radio" name="UF" value="RO">RO - Rondônia</label>
+                    <label><input type="radio" name="UF" value="RR">RR - Roraima</label>
+                    <label><input type="radio" name="UF" value="TO">TO - Tocantins</label>
+                </div>
+                <div class="optionsGroup">
+                    <h4>Região Nordeste</h4>
+                    <label><input type="radio" name="UF" value="AL">AL - Alagoas</label>
+                    <label><input type="radio" name="UF" value="BA">BA - Bahia</label>
+                    <label><input type="radio" name="UF" value="CE">CE - Ceará</label>
+                    <label><input type="radio" name="UF" value="MA">MA - Maranhão</label>
+                    <label><input type="radio" name="UF" value="PB">PB - Paraíba</label>
+                    <label><input type="radio" name="UF" value="PI">PI - Piauí</label>
+                    <label><input type="radio" name="UF" value="PE">PE - Pernambuco</label>
+                    <label><input type="radio" name="UF" value="RN">RN - Rio Grande do Norte</label>
+                    <label><input type="radio" name="UF" value="SE">SE - Sergipe</label>
+                </div>
+                <div class="optionsGroup">
+                    <h4>Região Centro-Oeste</h4>
+                    <label><input type="radio" name="UF" value="DF">DF - Distrito Federal</label>
+                    <label><input type="radio" name="UF" value="GO">GO - Goiás</label>
+                    <label><input type="radio" name="UF" value="MT">MT - Mato Grosso</label>
+                    <label><input type="radio" name="UF" value="MS">MS - Mato Grosso do Sul</label>
+                </div>
+                <div class="optionsGroup"> 
+                    <h4>Região Sudeste</h4>
+                    <label><input type="radio" name="UF" value="ES">ES - Espírito Santo</label>
+                    <label><input type="radio" name="UF" value="MG">MG - Minas Gerais</label>
+                    <label><input type="radio" name="UF" value="RJ">RJ - Rio de Janeiro</label>
+                    <label><input type="radio" name="UF" value="SP">SP - São Paulo</label>
+                </div>
+                <div class="optionsGroup">
+                    <h4>Região Sul</h4>
+                    <label><input type="radio" name="UF" value="PR">PR - Paraná</label>
+                    <label><input type="radio" name="UF" value="RS">RS - Rio Grande do Sul</label>
+                    <label><input type="radio" name="UF" value="SC">SC - Santa Catarina</label>
+                </div>
+            </div>
+        </div>
+        <div class="selectorWrapper">
+            Município:
+            <span class="dropdownValue">Selecione um Município</span>
+            <div class="selector" style="display: none;">
+                <button type="button">FECHAR</button>
+                <input type="text" class="searchBox" placeholder="Pesquisar Município">
+                <span>Selecione um Município</span>
+            </div>
+        </div>
+        <div class="selectorWrapper">
+            Instituição de ensino: 
+            <span class="dropdownValue">Selecione uma Instituição de Ensino</span>
+            <div class="selector" style="display: none;">
+                <button type="button">FECHAR</button>
+                <span>Selecione uma Instituição de Ensino</span>
+                <input type="text" class="searchBox" placeholder="Pesquisar Instituição de Ensino">
+            </div>
+        </div>
+        <div>Nome do estudante: <input type="text" name="studentName"></div>
+        <div>CGM/Matrícula: <input type="number" name="registrationNumber"></div>
+        <div>Telefone do responsável:
+            <input type="tel" name="guardianContactTelephone" placeholder="+xx (xx) xxxxx-xxxx" title="número de telefone">
+        </div>
+        <div class="choices">
+            Número de Whatsapp?
+            <label><input type="radio" name="whatsappNumber" value="true"> sim</label>
+            <label><input type="radio" name="whatsappNumber" value="false"> não</label>
+        </div>
+        <div>Distância até a instituição de ensino (KM)
+            <input type="number" name="schoolDistance" min="0.01" max="40" step="0.01">
+        </div>
+        <div>Renda per capita da família: (R$)
+            <input type="number" name="perCapitaIncome" min="300" max="30000">
+        </div>
+        <div>Como o estudante vai para a instituição de ensino:
+            <select name="transport">
+                <option value="" selected disabled>Selecione uma Forma de Locomoção</option>
+                <option value="walking">apenas andando</option>
+                <option value="familyVehicle">veículo familiar</option>
+                <option value="ride">carona de conhecidos</option>
+                <option value="bus">ônibus</option>
+                <option value="transporteEscolar">transporte escolar</option>
+                <option value="otherVehicle">outro veículo, como bicicleta</option>
+                <option value="noTransport">não há quem possa levá-lo</option>
+            </select>
+        </div>
+        <div class="choices">
+            O estudante trabalha?
+            <label class="radioInput"><input type="radio" name="studentWorks" value="true"> sim</label>
+            <label class="radioInput"><input type="radio" name="studentWorks" value="false"> não</label>
+        </div>
+        <div id="jobInputRangeLabel" style="display: none;">
+            O estudante consegue conciliar o trabalho e os estudos 
+            <input type="range" name="canMaintainStudiesJob" min="0" max="1" step="0.1">
+            <span class="rangeInfoSpan"></span>
+        </div>
+        <div style="display: none;" id="jobShift" class="choices">
+            Quando o estudante trabalha?
+            <label><input type="checkbox" class="jobCheckbox" name="workMorningShift"> manhã</label>
+            <label><input type="checkbox" class="jobCheckbox" name="workAfternoonShift"> tarde</label>
+            <label><input type="checkbox" class="jobCheckbox" name="workNightShift"> noite</label>
+            <label><input type="checkbox" class="jobCheckbox" name="workLateNightShift"> madrugada</label>
+        </div>
+        <div class="choices">
+            O estudante tem interesse em estudar?
+            <label><input type="radio" name="studentIsInteressed" value="true"> sim</label>
+            <label><input type="radio" name="studentIsInteressed" value="false"> não</label>
+        </div>
+        <div class="choices">
+            A família do estudante incentivá-o a estudar?
+            <label><input type="radio" name="familyHelpsStudent" value="true"> sim</label>
+            <label><input type="radio" name="familyHelpsStudent" value="false"> não</label>
+        </div>
+        <div class="choices">
+            O estudante se interessa pelas aulas?
+            <label><input type="radio" name="studentIsInteressedInTheClasses" value="true"> sim</label>
+            <label><input type="radio" name="studentIsInteressedInTheClasses" value="false"> não</label>
+        </div>
+        <div class="choices">
+            Quando o estudante estuda?
+            <label><input type="checkbox" class="studyCheckbox" name="studyMorningShift"> manhã</label>
+            <label><input type="checkbox" class="studyCheckbox" name="studyAfternoonShift"> tarde</label>
+            <label><input type="checkbox" class="studyCheckbox" name="studyNightShift"> noite</label>
+        </div>
+        <div class="choices">
+            O estudante sofre bullying?
+            <label><input type="radio" name="bullied" value="true"> sim</label>
+            <label><input type="radio" name="bullied" value="false"> não</label>
+        </div>
+        <div>
+            Quão boa é a saúde mental do estudante?
+            <input type="range" name="mentalHealth" min="0" max="1" step="0.1">
+            <span class="rangeInfoSpan"></span>
+        </div>
+        <div>
+            Quão boa é relação familiar do estudante?
+            <input type="range" name="familyRelationship" min="0" max="1" step="0.1">
+            <span class="rangeInfoSpan"></span>
+        </div>
+        <div>
+            Quão boa é a relações social do estudante com os outros?
+            <input type="range" name="socialRealtionships" min="0" max="1" step="0.1">
+            <span class="rangeInfoSpan"></span>
+        </div>
+        <div>
+            Quão boa é a estrutura da instituição de ensino?
+            <input type="range" name="instituteStructure" min="0" max="1" step="0.1">
+            <span class="rangeInfoSpan"></span>
+        </div>
+        <div>
+            Quão boa foi a experiência do estudante durante a pandemia em relação as aulas online?
+            <input type="range" name="onlineExperience" min="0" max="1" step="0.1">
+            <span class="rangeInfoSpan"></span>
+        </div>
+        <div class="choices">
+            O estudante apresenta sinais de neuro divergência?
+            <label><input type="radio" name="isNeuroDivergent" value="true"> sim</label>
+            <label><input type="radio" name="isNeuroDivergent" value="false"> não</label>
+        </div>
+        <div class="choices">
+            O estudante possui transtornos cognitivos?
+            <label><input type="radio" name="cognitiveProblems" value="true"> sim</label>
+            <label><input type="radio" name="cognitiveProblems" value="false"> não</label>
+        </div>
+        <div class="choices">
+            O estudante apresenta sinais de dificuldade de aprendizado?
+            <label><input type="radio" name="learningDifficult" value="true"> sim</label>
+            <label><input type="radio" name="learningDifficult" value="false"> não</label>
+        </div>
+        <div class="choices">
+            O estudante se sente sobrecarregado por causa da instituição de ensino?
+            <label><input type="radio" name="isStudentOverWhelmed" value="1"> sim</label>
+            <label><input type="radio" name="isStudentOverWhelmed" value="0.5"> mais ou menos</label>
+            <label><input type="radio" name="isStudentOverWhelmed" value="0"> não</label>
+        </div>
+        <button type="button" id="sendFormButton">ENVIAR</button>
+    </form>
+</body>
+
+</html>
