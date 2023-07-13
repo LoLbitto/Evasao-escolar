@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript/formEstudantes.js" defer></script>
+    <script src="javascript/formUtils.js" defer></script>
+    <title>Formulário Estudantes</title>
+</head>
+<body>
+    <form action="formEstudantes.html" method="post">
+        <div>
+            <button type="button" id="clearForm">Limpar Formulário</button>
+        </div>
+        Estado/Unidade Federativa: 
+        <span class="valorMenu">Selecione um Estado/Unidade Federativa</span>
+        <div class="seletor" style="display: none;">
+            <button type="button">FECHAR</button>
+            <input type="text" class="busca" placeholder="Pesquisar Unidade Federativa">
+            <span>Selecione um Estado/Unidade Federativa</span>
+            <div class="grupoDeOpcoes">
+                <h4>Região Norte</h4>
+                <label><input type="radio" name="UF" value="AC">AC - Acre</label>
+                <label><input type="radio" name="UF" value="AP">AP - Amapá</label>
+                <label><input type="radio" name="UF" value="AM">AM - Amazonas</label>
+                <label><input type="radio" name="UF" value="PA">PA - Pará</label>
+                <label><input type="radio" name="UF" value="RO">RO - Rondônia</label>
+                <label><input type="radio" name="UF" value="RR">RR - Roraima</label>
+                <label><input type="radio" name="UF" value="TO">TO - Tocantins</label>
+            </div>
+            <div class="grupoDeOpcoes">
+                <h4>Região Nordeste</h4>
+                <label><input type="radio" name="UF" value="AL">AL - Alagoas</label>
+                <label><input type="radio" name="UF" value="BA">BA - Bahia</label>
+                <label><input type="radio" name="UF" value="CE">CE - Ceará</label>
+                <label><input type="radio" name="UF" value="MA">MA - Maranhão</label>
+                <label><input type="radio" name="UF" value="PB">PB - Paraíba</label>
+                <label><input type="radio" name="UF" value="PI">PI - Piauí</label>
+                <label><input type="radio" name="UF" value="PE">PE - Pernambuco</label>
+                <label><input type="radio" name="UF" value="RN">RN - Rio Grande do Norte</label>
+                <label><input type="radio" name="UF" value="SE">SE - Sergipe</label>
+            </div>
+            <div class="grupoDeOpcoes">
+                <h4>Região Centro-Oeste</h4>
+                <label><input type="radio" name="UF" value="DF">DF - Distrito Federal</label>
+                <label><input type="radio" name="UF" value="GO">GO - Goiás</label>
+                <label><input type="radio" name="UF" value="MT">MT - Mato Grosso</label>
+                <label><input type="radio" name="UF" value="MS">MS - Mato Grosso do Sul</label>
+            </div>
+            <div class="grupoDeOpcoes"> 
+                <h4>Região Sudeste</h4>
+                <label><input type="radio" name="UF" value="ES">ES - Espírito Santo</label>
+                <label><input type="radio" name="UF" value="MG">MG - Minas Gerais</label>
+                <label><input type="radio" name="UF" value="RJ">RJ - Rio de Janeiro</label>
+                <label><input type="radio" name="UF" value="SP">SP - São Paulo</label>
+            </div>
+            <div class="grupoDeOpcoes">
+                <h4>Região Sul</h4>
+                <label><input type="radio" name="UF" value="PR">PR - Paraná</label>
+                <label><input type="radio" name="UF" value="RS">RS - Rio Grande do Sul</label>
+                <label><input type="radio" name="UF" value="SC">SC - Santa Catarina</label>
+            </div>
+        </div>
+        <div class="seletorWrapper">
+            Município:
+            <span class="valorMenu">Selecione um Município</span>
+            <div class="seletor" style="display: none;">
+                <button type="button">FECHAR</button>
+                <input type="text" class="busca" placeholder="Pesquisar Município">
+                <span>Selecione um Município</span>
+            </div>
+        </div>
+        <div class="seletorWrapper">
+            Instituição de ensino: 
+            <span class="valorMenu">Selecione uma Instituição de Ensino</span>
+            <div class="seletor" style="display: none;">
+                <button type="button">FECHAR</button>
+                <span>Selecione uma Instituição de Ensino</span>
+                <input type="text" class="busca" placeholder="Pesquisar Instituição de Ensino">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
