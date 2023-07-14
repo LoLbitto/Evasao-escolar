@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript/formEstudantes.js" defer></script>
+    <script src="javascript/formUtils.js" defer></script>
+    <title>Formulário Corpo Docente</title>
+    <link rel="stylesheet" href="css/estiloForm.css">
+</head>
+
+<body>
+    <form action="formEstudantes.html" method="post">
+        <h1>Corpo Docente</h1>
+        <div>
+            <button type="button" id="limparForm">Limpar Formulário</button>
+        </div>
+        <div class="seletorWrapper" id="seletorUFs">
+            Estado/Unidade Federativa:
+            <span class="valorMenu">Selecione um Estado/Unidade Federativa</span>
+            <div class="seletor" style="display: none;">
+                <button type="button">FECHAR</button>
+                <input type="text" class="busca" placeholder="Pesquisar Unidade Federativa">
+                <span>Selecione um Estado/Unidade Federativa</span>
+                <div class="grupoDeOpcoes">
+                    <h4>Região Norte</h4>
+                    <label><input type="radio" name="UF" value="AC" required>AC - Acre</label>
+                    <label><input type="radio" name="UF" value="AP">AP - Amapá</label>
+                    <label><input type="radio" name="UF" value="AM">AM - Amazonas</label>
+                    <label><input type="radio" name="UF" value="PA">PA - Pará</label>
+                    <label><input type="radio" name="UF" value="RO">RO - Rondônia</label>
+                    <label><input type="radio" name="UF" value="RR">RR - Roraima</label>
+                    <label><input type="radio" name="UF" value="TO">TO - Tocantins</label>
+                </div>
+                <div class="grupoDeOpcoes">
+                    <h4>Região Nordeste</h4>
+                    <label><input type="radio" name="UF" value="AL">AL - Alagoas</label>
+                    <label><input type="radio" name="UF" value="BA">BA - Bahia</label>
+                    <label><input type="radio" name="UF" value="CE">CE - Ceará</label>
+                    <label><input type="radio" name="UF" value="MA">MA - Maranhão</label>
+                    <label><input type="radio" name="UF" value="PB">PB - Paraíba</label>
+                    <label><input type="radio" name="UF" value="PI">PI - Piauí</label>
+                    <label><input type="radio" name="UF" value="PE">PE - Pernambuco</label>
+                    <label><input type="radio" name="UF" value="RN">RN - Rio Grande do Norte</label>
+                    <label><input type="radio" name="UF" value="SE">SE - Sergipe</label>
+                </div>
+                <div class="grupoDeOpcoes">
+                    <h4>Região Centro-Oeste</h4>
+                    <label><input type="radio" name="UF" value="DF">DF - Distrito Federal</label>
+                    <label><input type="radio" name="UF" value="GO">GO - Goiás</label>
+                    <label><input type="radio" name="UF" value="MT">MT - Mato Grosso</label>
+                    <label><input type="radio" name="UF" value="MS">MS - Mato Grosso do Sul</label>
+                </div>
+                <div class="grupoDeOpcoes">
+                    <h4>Região Sudeste</h4>
+                    <label><input type="radio" name="UF" value="ES">ES - Espírito Santo</label>
+                    <label><input type="radio" name="UF" value="MG">MG - Minas Gerais</label>
+                    <label><input type="radio" name="UF" value="RJ">RJ - Rio de Janeiro</label>
+                    <label><input type="radio" name="UF" value="SP">SP - São Paulo</label>
+                </div>
+                <div class="grupoDeOpcoes">
+                    <h4>Região Sul</h4>
+                    <label><input type="radio" name="UF" value="PR">PR - Paraná</label>
+                    <label><input type="radio" name="UF" value="RS">RS - Rio Grande do Sul</label>
+                    <label><input type="radio" name="UF" value="SC">SC - Santa Catarina</label>
+                </div>
+            </div>
+        </div>
+        <div class="seletorWrapper">
+            Município:
+            <span class="valorMenu">Selecione um Município</span>
+            <div class="seletor" style="display: none;">
+                <button type="button">FECHAR</button>
+                <input type="text" class="busca" placeholder="Pesquisar Município">
+                <span>Selecione um Município</span>
+            </div>
+        </div>
+        <div class="seletorWrapper">
+            Instituição de ensino do estudante:
+            <span class="valorMenu">Selecione uma Instituição de Ensino</span>
+            <div class="seletor" style="display: none;">
+                <button type="button">FECHAR</button>
+                <input type="text" class="busca" placeholder="Pesquisar Instituição de Ensino">
+                <span>Selecione uma Instituição de Ensino</span>
+            </div>
+        </div>
+        <div>
+            <label>Nome do estudante: <input type="text" name="nome" placeholder="Nome completo do estudante" required></label>
+        </div>
+        <div>
+            <label>Número de matrícula: <input type="number" name="numero_matricula" placeholder="Número de matrícula do estudante" required></label>
+        </div>
+        <div class="opcoes">
+            Desempenho escolar:
+            <label><input type="radio" name="desempenho" value="1.0" required>muito bom</label>
+            <label><input type="radio" name="desempenho" value="0.8">bom</label>
+            <label><input type="radio" name="desempenho" value="0.5">mais ou menos</label>
+            <label><input type="radio" name="desempenho" value="0.2">ruim</label>
+            <label><input type="radio" name="desempenho" value="0.0">muito ruim</label>
+        </div>
+        <div class="opcoes">
+            Apresenta sinais de neuro divergência?
+            <label><input type="radio" name="sinais_de_neuro_divergencia" value="0" required>não</label>
+            <label><input type="radio" name="sinais_de_neuro_divergencia" value="1">sim</label>
+            <label><input type="radio" name="sinais_de_neuro_divergencia" value="2">prefiro não dizer</label>
+            <label><input type="radio" name="sinais_de_neuro_divergencia" value="3">não sei</label>
+        </div>
+        <button id="enviarForm">ENVIAR</button>
+    </form>
+    
+</body>
+</html>
