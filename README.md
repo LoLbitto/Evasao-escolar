@@ -8,4 +8,4 @@ Organização do projeto
     - java
         - <código do programa em java>
     - database
-        - <código do bando de dados>
+        - <código do banco de dados>
