@@ -4,15 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="dark light">
     <script src="javascript/formEstudantes.js" defer></script>
     <script src="javascript/formUtils.js" defer></script>
+    <script src="javascript/trocarTema.js" defer></script>
     <title>Formulário Estudantes</title>
     <link rel="stylesheet" href="css/estiloForm.css">
+    <link rel="shortcut icon" href="logos/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
+    <header>
+        <a href="index.html"><img src="logos/logoIF.png" alt="logo do Instituto Federal do Paraná" id="logo"></a>
+        <h1>Formulário Estudantes</h1>
+        <div>
+            <button title="trocar tema" class="trocarTema">
+                <img src="featherIcons/sun.svg" alt="símbolo do botão para trocar o tema do site">
+            </button>
+            <button title="página inicial" class="home">
+                <a href="index.html"><img src="featherIcons/home.svg" alt="símbolo do botão para voltar a página principal"></a>
+            </button>
+        </div>
+    </header>
     <form action="formEstudantes.html" method="post">
-        <h1>Estudante</h1>
         <div>
             <button type="button" id="limparForm">Limpar Formulário</button>
         </div>
