@@ -1,0 +1,58 @@
+@import "estilosFlex";
+
+:root {
+    --corBorda: #d4d4d4;
+    --corTituloDeGrupo: #696969;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    @include flexColumn(center, initial);
+    width: 100%;
+    gap: 1em;
+    margin: .5em 0;
+
+    div:not(.seletor):not(.grupoDeOpcoes) {
+        width: 90%;
+        border: solid var(--corBorda);
+        border-radius: .7em;
+        padding: 0.5em;
+    }
+
+    input:not([type=radio]):not([type=checkbox]) {width: 100%;}
+
+    div.escolhas, div.seletorWrapper, div.opcoes {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    h4 { color: var(--corTituloDeGrupo) }
+
+    button {
+        width: 90%;
+    }
+
+    button#limparForm {
+        width: 100%;
+    }
+
+    span.valorMenu {
+        border: solid var(--corBorda);
+        padding: .2em;
+        width: 100%;
+    }
+
+    div.seletor, div.grupoDeOpcoes {
+        @include flexColumn(unset, unset);
+        button {width: 100%;}
+    }
+
+    select {
+        width: 100%;
+    }
+}
