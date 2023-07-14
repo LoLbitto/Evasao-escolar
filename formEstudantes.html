@@ -1,64 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="javascript/formEstudantes.js" defer></script>
     <script src="javascript/formUtils.js" defer></script>
     <title>Formulário Estudantes</title>
+    <link rel="stylesheet" href="css/estiloForm.css">
 </head>
+
 <body>
     <form action="formEstudantes.html" method="post">
+        <h1>Estudante</h1>
         <div>
-            <button type="button" id="clearForm">Limpar Formulário</button>
+            <button type="button" id="limparForm">Limpar Formulário</button>
         </div>
-        Estado/Unidade Federativa: 
-        <span class="valorMenu">Selecione um Estado/Unidade Federativa</span>
-        <div class="seletor" style="display: none;">
-            <button type="button">FECHAR</button>
-            <input type="text" class="busca" placeholder="Pesquisar Unidade Federativa">
-            <span>Selecione um Estado/Unidade Federativa</span>
-            <div class="grupoDeOpcoes">
-                <h4>Região Norte</h4>
-                <label><input type="radio" name="UF" value="AC">AC - Acre</label>
-                <label><input type="radio" name="UF" value="AP">AP - Amapá</label>
-                <label><input type="radio" name="UF" value="AM">AM - Amazonas</label>
-                <label><input type="radio" name="UF" value="PA">PA - Pará</label>
-                <label><input type="radio" name="UF" value="RO">RO - Rondônia</label>
-                <label><input type="radio" name="UF" value="RR">RR - Roraima</label>
-                <label><input type="radio" name="UF" value="TO">TO - Tocantins</label>
-            </div>
-            <div class="grupoDeOpcoes">
-                <h4>Região Nordeste</h4>
-                <label><input type="radio" name="UF" value="AL">AL - Alagoas</label>
-                <label><input type="radio" name="UF" value="BA">BA - Bahia</label>
-                <label><input type="radio" name="UF" value="CE">CE - Ceará</label>
-                <label><input type="radio" name="UF" value="MA">MA - Maranhão</label>
-                <label><input type="radio" name="UF" value="PB">PB - Paraíba</label>
-                <label><input type="radio" name="UF" value="PI">PI - Piauí</label>
-                <label><input type="radio" name="UF" value="PE">PE - Pernambuco</label>
-                <label><input type="radio" name="UF" value="RN">RN - Rio Grande do Norte</label>
-                <label><input type="radio" name="UF" value="SE">SE - Sergipe</label>
-            </div>
-            <div class="grupoDeOpcoes">
-                <h4>Região Centro-Oeste</h4>
-                <label><input type="radio" name="UF" value="DF">DF - Distrito Federal</label>
-                <label><input type="radio" name="UF" value="GO">GO - Goiás</label>
-                <label><input type="radio" name="UF" value="MT">MT - Mato Grosso</label>
-                <label><input type="radio" name="UF" value="MS">MS - Mato Grosso do Sul</label>
-            </div>
-            <div class="grupoDeOpcoes"> 
-                <h4>Região Sudeste</h4>
-                <label><input type="radio" name="UF" value="ES">ES - Espírito Santo</label>
-                <label><input type="radio" name="UF" value="MG">MG - Minas Gerais</label>
-                <label><input type="radio" name="UF" value="RJ">RJ - Rio de Janeiro</label>
-                <label><input type="radio" name="UF" value="SP">SP - São Paulo</label>
-            </div>
-            <div class="grupoDeOpcoes">
-                <h4>Região Sul</h4>
-                <label><input type="radio" name="UF" value="PR">PR - Paraná</label>
-                <label><input type="radio" name="UF" value="RS">RS - Rio Grande do Sul</label>
-                <label><input type="radio" name="UF" value="SC">SC - Santa Catarina</label>
+        <div class="seletorWrapper">
+            Estado/Unidade Federativa:
+            <span class="valorMenu">Selecione um Estado/Unidade Federativa</span>
+            <div class="seletor" style="display: none;">
+                <button type="button">FECHAR</button>
+                <input type="text" class="busca" placeholder="Pesquisar Unidade Federativa">
+                <span>Selecione um Estado/Unidade Federativa</span>
+                <div class="grupoDeOpcoes">
+                    <h4>Região Norte</h4>
+                    <label><input type="radio" name="UF" value="AC">AC - Acre</label>
+                    <label><input type="radio" name="UF" value="AP">AP - Amapá</label>
+                    <label><input type="radio" name="UF" value="AM">AM - Amazonas</label>
+                    <label><input type="radio" name="UF" value="PA">PA - Pará</label>
+                    <label><input type="radio" name="UF" value="RO">RO - Rondônia</label>
+                    <label><input type="radio" name="UF" value="RR">RR - Roraima</label>
+                    <label><input type="radio" name="UF" value="TO">TO - Tocantins</label>
+                </div>
+                <div class="grupoDeOpcoes">
+                    <h4>Região Nordeste</h4>
+                    <label><input type="radio" name="UF" value="AL">AL - Alagoas</label>
+                    <label><input type="radio" name="UF" value="BA">BA - Bahia</label>
+                    <label><input type="radio" name="UF" value="CE">CE - Ceará</label>
+                    <label><input type="radio" name="UF" value="MA">MA - Maranhão</label>
+                    <label><input type="radio" name="UF" value="PB">PB - Paraíba</label>
+                    <label><input type="radio" name="UF" value="PI">PI - Piauí</label>
+                    <label><input type="radio" name="UF" value="PE">PE - Pernambuco</label>
+                    <label><input type="radio" name="UF" value="RN">RN - Rio Grande do Norte</label>
+                    <label><input type="radio" name="UF" value="SE">SE - Sergipe</label>
+                </div>
+                <div class="grupoDeOpcoes">
+                    <h4>Região Centro-Oeste</h4>
+                    <label><input type="radio" name="UF" value="DF">DF - Distrito Federal</label>
+                    <label><input type="radio" name="UF" value="GO">GO - Goiás</label>
+                    <label><input type="radio" name="UF" value="MT">MT - Mato Grosso</label>
+                    <label><input type="radio" name="UF" value="MS">MS - Mato Grosso do Sul</label>
+                </div>
+                <div class="grupoDeOpcoes">
+                    <h4>Região Sudeste</h4>
+                    <label><input type="radio" name="UF" value="ES">ES - Espírito Santo</label>
+                    <label><input type="radio" name="UF" value="MG">MG - Minas Gerais</label>
+                    <label><input type="radio" name="UF" value="RJ">RJ - Rio de Janeiro</label>
+                    <label><input type="radio" name="UF" value="SP">SP - São Paulo</label>
+                </div>
+                <div class="grupoDeOpcoes">
+                    <h4>Região Sul</h4>
+                    <label><input type="radio" name="UF" value="PR">PR - Paraná</label>
+                    <label><input type="radio" name="UF" value="RS">RS - Rio Grande do Sul</label>
+                    <label><input type="radio" name="UF" value="SC">SC - Santa Catarina</label>
+                </div>
             </div>
         </div>
         <div class="seletorWrapper">
@@ -71,7 +77,7 @@
             </div>
         </div>
         <div class="seletorWrapper">
-            Instituição de ensino: 
+            Instituição de ensino do estudante:
             <span class="valorMenu">Selecione uma Instituição de Ensino</span>
             <div class="seletor" style="display: none;">
                 <button type="button">FECHAR</button>
@@ -79,6 +85,44 @@
                 <input type="text" class="busca" placeholder="Pesquisar Instituição de Ensino">
             </div>
         </div>
+        <div>
+            <label>Nome do estudante: <input type="text" name="nome" placeholder="Nome completo do estudante"></label>
+        </div>
+        <div>
+            <label>Número de matrícula: <input type="number" name="numero_matricula" placeholder="Número de matrícula do estudante"></label>
+        </div>
+        <div>
+            <label>
+                Renda familiar:
+                <select name="rendaFamiliar">
+                    <option value="" disabled selected>Selecione um intervalo de renda</option>
+                    <option value="0-500">R$0,00 - R$500,99</option>
+                    <option value="501-1000">R$501,00 - R$1000,99</option>
+                    <option value="1001-1500">R$1001,00 - R$1500,99</option>
+                    <option value="1501-2000">R$1501,00 - R$2000,99</option>
+                    <option value="2001-2500">R$2001,00 - R$2500,99</option>
+                    <option value="2501-3000">R$2501,00 - R$3000,99</option>
+                    <option value="3001+">Mais que R$3001</option>
+                </select>
+            </label>
+        </div>
+        <div class="opcoes">
+            Desempenho escolar:
+            <label><input type="radio" name="desempenho" value="1.0">muito bom</label>
+            <label><input type="radio" name="desempenho" value="0.8">bom</label>
+            <label><input type="radio" name="desempenho" value="0.5">mais ou menos</label>
+            <label><input type="radio" name="desempenho" value="0.2">ruim</label>
+            <label><input type="radio" name="desempenho" value="0.0">muito ruim</label>
+        </div>
+        <div class="opcoes">
+            Apresenta sinais de neuro divergência?
+            <label><input type="radio" name="sinais_de_neuro_divergencia" value="0">não</label>
+            <label><input type="radio" name="sinais_de_neuro_divergencia" value="1">sim</label>
+            <label><input type="radio" name="sinais_de_neuro_divergencia" value="2">prefiro não dizer</label>
+            <label><input type="radio" name="sinais_de_neuro_divergencia" value="3">não sei</label>
+        </div>
+        <button type="button" id="enviarForm">ENVIAR</button>
     </form>
 </body>
+
 </html>
