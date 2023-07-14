@@ -25,7 +25,7 @@
                 <span>Selecione um Estado/Unidade Federativa</span>
                 <div class="grupoDeOpcoes">
                     <h4>Região Norte</h4>
-                    <label><input type="radio" name="UF" value="AC">AC - Acre</label>
+                    <label><input type="radio" name="UF" value="AC" required>AC - Acre</label>
                     <label><input type="radio" name="UF" value="AP">AP - Amapá</label>
                     <label><input type="radio" name="UF" value="AM">AM - Amazonas</label>
                     <label><input type="radio" name="UF" value="PA">PA - Pará</label>
@@ -86,15 +86,15 @@
             </div>
         </div>
         <div>
-            <label>Nome do estudante: <input type="text" name="nome" placeholder="Nome completo do estudante"></label>
+            <label>Nome do estudante: <input type="text" name="nome" placeholder="Nome completo do estudante" required></label>
         </div>
         <div>
-            <label>Número de matrícula: <input type="number" name="numero_matricula" placeholder="Número de matrícula do estudante"></label>
+            <label>Número de matrícula: <input type="number" name="numero_matricula" placeholder="Número de matrícula do estudante" required></label>
         </div>
         <div>
             <label>
                 Renda familiar:
-                <select name="rendaFamiliar">
+                <select name="rendaFamiliar" required>
                     <option value="" disabled selected>Selecione um intervalo de renda</option>
                     <option value="0-500">R$0,00 - R$500,99</option>
                     <option value="501-1000">R$501,00 - R$1000,99</option>
@@ -108,7 +108,7 @@
         </div>
         <div class="opcoes">
             Desempenho escolar:
-            <label><input type="radio" name="desempenho" value="1.0">muito bom</label>
+            <label><input type="radio" name="desempenho" value="1.0" required>muito bom</label>
             <label><input type="radio" name="desempenho" value="0.8">bom</label>
             <label><input type="radio" name="desempenho" value="0.5">mais ou menos</label>
             <label><input type="radio" name="desempenho" value="0.2">ruim</label>
@@ -116,12 +116,12 @@
         </div>
         <div class="opcoes">
             Apresenta sinais de neuro divergência?
-            <label><input type="radio" name="sinais_de_neuro_divergencia" value="0">não</label>
+            <label><input type="radio" name="sinais_de_neuro_divergencia" value="0" required>não</label>
             <label><input type="radio" name="sinais_de_neuro_divergencia" value="1">sim</label>
             <label><input type="radio" name="sinais_de_neuro_divergencia" value="2">prefiro não dizer</label>
             <label><input type="radio" name="sinais_de_neuro_divergencia" value="3">não sei</label>
         </div>
-        <button type="button" id="enviarForm">ENVIAR</button>
+        <button id="enviarForm">ENVIAR</button>
     </form>
 </body>
 

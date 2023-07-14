@@ -58,6 +58,7 @@ const adicionarOpcao = (
     inputTag.type = "radio"
     inputTag.name = nomeRadio
     labelTag.className = classeElemento
+    inputTag.required = true
     labelTag.appendChild(inputTag)
     labelTag.appendChild(inputTagTexto)
     tagPai.appendChild(labelTag)
