@@ -62,7 +62,6 @@ const limparForm = () => {
     removerElementosPelaClasse(".escola");
     for (let i = 0; i < valoresInciaisSeletores.length; i++) {
         seletores[i].style.display = "none";
-        caixasDeBusca[i].style.display = "none";
         valoresMenus[i].innerHTML = valoresInciaisSeletores[i];
     }
 };
