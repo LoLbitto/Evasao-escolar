@@ -8,7 +8,7 @@
     <script src="javascript/formEstudantes.js" defer></script>
     <script src="javascript/formUtils.js" defer></script>
     <script src="javascript/trocarTema.js" defer></script>
-    <title>Formulário Estudantes</title>
+    <title>Formulário Corpo Docente</title>
     <link rel="stylesheet" href="css/estiloForm.css">
     <link rel="shortcut icon" href="logos/favicon.ico" type="image/x-icon">
 </head>
@@ -16,7 +16,7 @@
 <body>
     <header>
         <a href="index.html"><img src="logos/logoIF.png" alt="logo do Instituto Federal do Paraná" id="logo"></a>
-        <h1>Formulário Estudantes</h1>
+        <h1>Formulário Corpo Docente</h1>
         <div>
             <button title="trocar tema" class="trocarTema">
                 <img src="featherIcons/sun.svg" alt="símbolo do botão para trocar o tema do site">
@@ -105,21 +105,6 @@
         <div>
             <label>Número de matrícula: <input type="number" name="numero_matricula" placeholder="Número de matrícula do estudante" required></label>
         </div>
-        <div>
-            <label>
-                Renda familiar:
-                <select name="rendaFamiliar" required>
-                    <option value="" disabled selected>Selecione um intervalo de renda</option>
-                    <option value="0-500">R$0,00 - R$500,99</option>
-                    <option value="501-1000">R$501,00 - R$1000,99</option>
-                    <option value="1001-1500">R$1001,00 - R$1500,99</option>
-                    <option value="1501-2000">R$1501,00 - R$2000,99</option>
-                    <option value="2001-2500">R$2001,00 - R$2500,99</option>
-                    <option value="2501-3000">R$2501,00 - R$3000,99</option>
-                    <option value="3001+">Mais que R$3001</option>
-                </select>
-            </label>
-        </div>
         <div class="opcoes">
             Desempenho escolar:
             <label><input type="radio" name="desempenho" value="1.0" required>muito bom</label>
@@ -137,6 +122,6 @@
         </div>
         <button id="enviarForm">ENVIAR</button>
     </form>
+    
 </body>
-
 </html>
