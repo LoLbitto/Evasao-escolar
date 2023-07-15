@@ -71,7 +71,7 @@ const mudarBotao = () => {
     imagemBotao.src = imagensBotaoTema[0]
 }
 
-
+// Sim, a função precisa ser chamada duas vezes inicialmente para funcionar corretamente
 mudarTema()
 mudarTema()
 
