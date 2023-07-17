@@ -2,7 +2,7 @@
 const rootHTML = document.querySelector(":root");
 const botaoTrocarTema = document.querySelector(".trocarTema");
 const imagemBotaoHome = document.querySelector(".home img");
-const imagemBotao = document.querySelector(".trocarTema img");
+const imagemBotaoTema = document.querySelector(".trocarTema img");
 const logoIF = document.querySelector("#logo");
 if (!window.localStorage.getItem("tema")) {
     window.localStorage.setItem("tema", matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark");
@@ -45,13 +45,13 @@ const mudarLogo = () => {
     logoIF.src = imagensLogo[0];
 };
 const mudarBotao = () => {
-    if (!botaoTrocarTema || !imagemBotao) {
+    if (!botaoTrocarTema || !imagemBotaoTema) {
         return;
     }
     const imagensBotaoTema = ["featherIcons/sun.svg", "featherIcons/moon.svg"];
     const imagensBotaoHome = ["featherIcons/home.svg", "featherIcons/homeDarkMode.svg"];
     if (window.localStorage.getItem("tema") == "light") {
-        imagemBotao.src = imagensBotaoTema[1];
+        imagemBotaoTema.src = imagensBotaoTema[1];
         if (imagemBotaoHome) {
             imagemBotaoHome.src = imagensBotaoHome[1];
         }
@@ -60,7 +60,7 @@ const mudarBotao = () => {
     if (imagemBotaoHome) {
         imagemBotaoHome.src = imagensBotaoHome[0];
     }
-    imagemBotao.src = imagensBotaoTema[0];
+    imagemBotaoTema.src = imagensBotaoTema[0];
 };
 mudarTema();
 mudarTema();
