@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript/formUtils.js" defer></script>
+    <script src="javascript/formInfoEstudante.js" defer></script>
+    <script src="javascript/trocarTema.js" defer></script>
+    <title>Solicitar Informações de um Estudante</title>
+    <link rel="stylesheet" href="css/estiloForm.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="logos/logoIF.png" alt="logo do Instituto Federal do Paraná" id="logo"></a>
+        <h1>Solicitar Informações de um Estudante</h1>
+        <div>
+            <button title="trocar tema" class="trocarTema">
+                <img src="featherIcons/sun.svg" alt="símbolo do botão para trocar o tema do site">
+            </button>
+            <button title="página inicial" class="home">
+                <a href="index.html"><img src="featherIcons/home.svg" alt="símbolo do botão para voltar a página principal"></a>
+            </button>
+        </div>
+    </header>
+    <form action="formInfoEstudante.html" method="post">
+        <div>
+            <button type="button" id="limparForm">Limpar Formulário</button>
+        </div>
+        <div class="seletorWrapper" id="seletorUFs">
+            Estado/Unidade Federativa:
+            <span class="valorMenu">Selecione um Estado/Unidade Federativa</span>
+            <div class="seletor" style="display: none;">
+                <button type="button">FECHAR</button>
+                <input type="text" class="busca" placeholder="Pesquisar Unidade Federativa">
+                <span>Selecione um Estado/Unidade Federativa</span>
+                <div class="grupoDeOpcoes">
+                    <h4>Região Norte</h4>
+                    <label><input type="radio" name="UF" value="AC" required>AC - Acre</label>
+                    <label><input type="radio" name="UF" value="AP">AP - Amapá</label>
+                    <label><input type="radio" name="UF" value="AM">AM - Amazonas</label>
+                    <label><input type="radio" name="UF" value="PA">PA - Pará</label>
+                    <label><input type="radio" name="UF" value="RO">RO - Rondônia</label>
+                    <label><input type="radio" name="UF" value="RR">RR - Roraima</label>
+                    <label><input type="radio" name="UF" value="TO">TO - Tocantins</label>
+                </div>
+                <div class="grupoDeOpcoes">
+                    <h4>Região Nordeste</h4>
+                    <label><input type="radio" name="UF" value="AL">AL - Alagoas</label>
+                    <label><input type="radio" name="UF" value="BA">BA - Bahia</label>
+                    <label><input type="radio" name="UF" value="CE">CE - Ceará</label>
+                    <label><input type="radio" name="UF" value="MA">MA - Maranhão</label>
+                    <label><input type="radio" name="UF" value="PB">PB - Paraíba</label>
+                    <label><input type="radio" name="UF" value="PI">PI - Piauí</label>
+                    <label><input type="radio" name="UF" value="PE">PE - Pernambuco</label>
+                    <label><input type="radio" name="UF" value="RN">RN - Rio Grande do Norte</label>
+                    <label><input type="radio" name="UF" value="SE">SE - Sergipe</label>
+                </div>
+                <div class="grupoDeOpcoes">
+                    <h4>Região Centro-Oeste</h4>
+                    <label><input type="radio" name="UF" value="DF">DF - Distrito Federal</label>
+                    <label><input type="radio" name="UF" value="GO">GO - Goiás</label>
+                    <label><input type="radio" name="UF" value="MT">MT - Mato Grosso</label>
+                    <label><input type="radio" name="UF" value="MS">MS - Mato Grosso do Sul</label>
+                </div>
+                <div class="grupoDeOpcoes">
+                    <h4>Região Sudeste</h4>
+                    <label><input type="radio" name="UF" value="ES">ES - Espírito Santo</label>
+                    <label><input type="radio" name="UF" value="MG">MG - Minas Gerais</label>
+                    <label><input type="radio" name="UF" value="RJ">RJ - Rio de Janeiro</label>
+                    <label><input type="radio" name="UF" value="SP">SP - São Paulo</label>
+                </div>
+                <div class="grupoDeOpcoes">
+                    <h4>Região Sul</h4>
+                    <label><input type="radio" name="UF" value="PR">PR - Paraná</label>
+                    <label><input type="radio" name="UF" value="RS">RS - Rio Grande do Sul</label>
+                    <label><input type="radio" name="UF" value="SC">SC - Santa Catarina</label>
+                </div>
+            </div>
+        </div>
+        <div class="seletorWrapper">
+            Município:
+            <span class="valorMenu">Selecione um Município</span>
+            <div class="seletor" style="display: none;">
+                <button type="button">FECHAR</button>
+                <input type="text" class="busca" placeholder="Pesquisar Município">
+                <span>Selecione um Município</span>
+            </div>
+        </div>
+        <div class="seletorWrapper">
+            Instituição de ensino do estudante:
+            <span class="valorMenu">Selecione uma Instituição de Ensino</span>
+            <div class="seletor" style="display: none;">
+                <button type="button">FECHAR</button>
+                <input type="text" class="busca" placeholder="Pesquisar Instituição de Ensino">
+                <span>Selecione uma Instituição de Ensino</span>
+            </div>
+        </div>
+        <div class="opcoes">
+            Nome e/ou número de matrícula:
+            <label>
+                <input type="checkbox" name="nome_ou_matricula">nome
+            </label>
+            <label>
+                <input type="checkbox" name="nome_ou_matricula">número de matrícula
+            </label>
+        </div>
+        <div style="display: none;">
+            <label>Nome do estudante: 
+                <input type="text" name="nome_estudante" placeholder="Nome completo do estudante">
+            </label>
+        </div>
+        <div style="display: none;">
+            <label>Número de matrícula: 
+                <input type="number" name="numero_matricula" placeholder="Número de matrícula do estudante">
+            </label>
+        </div>
+        <button id="enviarForm">ENVIAR</button>
+    </form>
+</body>
+</html>
