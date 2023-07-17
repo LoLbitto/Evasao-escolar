@@ -1,7 +1,7 @@
 const rootHTML: HTMLElement | null = document.querySelector(":root")
 const botaoTrocarTema: HTMLButtonElement | null = document.querySelector(".trocarTema")
 const imagemBotaoHome: HTMLImageElement | null = document.querySelector(".home img")
-const imagemBotao: HTMLImageElement | null = document.querySelector(".trocarTema img")
+const imagemBotaoTema: HTMLImageElement | null = document.querySelector(".trocarTema img")
 const logoIF: HTMLImageElement | null = document.querySelector("#logo")
 
 // Salva o tema preferido no local storage para que possa acessado em outras páginas
@@ -56,19 +56,19 @@ const mudarLogo = () => {
 }
 
 const mudarBotao = () => {
-    if (!botaoTrocarTema || !imagemBotao) { return }
+    if (!botaoTrocarTema || !imagemBotaoTema) { return }
 
     const imagensBotaoTema = ["featherIcons/sun.svg", "featherIcons/moon.svg"]
     const imagensBotaoHome = ["featherIcons/home.svg", "featherIcons/homeDarkMode.svg"]
 
     if (window.localStorage.getItem("tema") == "light") {
-        imagemBotao.src = imagensBotaoTema[1]
+        imagemBotaoTema.src = imagensBotaoTema[1]
         if (imagemBotaoHome) { imagemBotaoHome.src = imagensBotaoHome[1] }
         return
     }
 
     if (imagemBotaoHome) { imagemBotaoHome.src = imagensBotaoHome[0] }
-    imagemBotao.src = imagensBotaoTema[0]
+    imagemBotaoTema.src = imagensBotaoTema[0]
 }
 
 // Sim, a função precisa ser chamada duas vezes inicialmente para funcionar corretamente

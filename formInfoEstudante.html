@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="dark light">
     <script src="javascript/formUtils.js" defer></script>
+    <script src="javascript/formInfoEstudante.js" defer></script>
     <script src="javascript/trocarTema.js" defer></script>
-    <title>Formulário Estudantes</title>
+    <title>Solicitar Informações de um Estudante</title>
     <link rel="stylesheet" href="css/estiloForm.css">
-    <link rel="shortcut icon" href="logos/favicon.ico" type="image/x-icon">
 </head>
-
 <body>
     <header>
         <a href="index.html"><img src="logos/logoIF.png" alt="logo do Instituto Federal do Paraná" id="logo"></a>
-        <h1>Formulário Estudantes</h1>
+        <h1>Solicitar Informações de um Estudante</h1>
         <div>
             <button title="trocar tema" class="trocarTema">
                 <img src="featherIcons/sun.svg" alt="símbolo do botão para trocar o tema do site">
@@ -25,7 +22,7 @@
             </button>
         </div>
     </header>
-    <form action="formEstudantes.html" method="post">
+    <form action="formInfoEstudante.html" method="post">
         <div>
             <button type="button" id="limparForm">Limpar Formulário</button>
         </div>
@@ -98,44 +95,26 @@
                 <span>Selecione uma Instituição de Ensino</span>
             </div>
         </div>
-        <div>
-            <label>Nome do estudante: <input type="text" name="nome" placeholder="Nome completo do estudante" required></label>
-        </div>
-        <div>
-            <label>Número de matrícula: <input type="number" name="numero_matricula" placeholder="Número de matrícula do estudante" required></label>
-        </div>
-        <div>
+        <div class="opcoes">
+            Nome e/ou número de matrícula:
             <label>
-                Renda familiar:
-                <select name="rendaFamiliar" required>
-                    <option value="" disabled selected>Selecione um intervalo de renda</option>
-                    <option value="0-500">R$0,00 - R$500,99</option>
-                    <option value="501-1000">R$501,00 - R$1000,99</option>
-                    <option value="1001-1500">R$1001,00 - R$1500,99</option>
-                    <option value="1501-2000">R$1501,00 - R$2000,99</option>
-                    <option value="2001-2500">R$2001,00 - R$2500,99</option>
-                    <option value="2501-3000">R$2501,00 - R$3000,99</option>
-                    <option value="3001+">Mais que R$3001</option>
-                </select>
+                <input type="checkbox" name="nome_ou_matricula">nome
+            </label>
+            <label>
+                <input type="checkbox" name="nome_ou_matricula">número de matrícula
             </label>
         </div>
-        <div class="opcoes">
-            Desempenho escolar:
-            <label><input type="radio" name="desempenho" value="1.0" required>muito bom</label>
-            <label><input type="radio" name="desempenho" value="0.8">bom</label>
-            <label><input type="radio" name="desempenho" value="0.5">mais ou menos</label>
-            <label><input type="radio" name="desempenho" value="0.2">ruim</label>
-            <label><input type="radio" name="desempenho" value="0.0">muito ruim</label>
+        <div style="display: none;">
+            <label>Nome do estudante: 
+                <input type="text" name="nome_estudante" placeholder="Nome completo do estudante">
+            </label>
         </div>
-        <div class="opcoes">
-            Apresenta sinais de neuro divergência?
-            <label><input type="radio" name="sinais_de_neuro_divergencia" value="0" required>não</label>
-            <label><input type="radio" name="sinais_de_neuro_divergencia" value="1">sim</label>
-            <label><input type="radio" name="sinais_de_neuro_divergencia" value="2">prefiro não dizer</label>
-            <label><input type="radio" name="sinais_de_neuro_divergencia" value="3">não sei</label>
+        <div style="display: none;">
+            <label>Número de matrícula: 
+                <input type="number" name="numero_matricula" placeholder="Número de matrícula do estudante">
+            </label>
         </div>
         <button id="enviarForm">ENVIAR</button>
     </form>
 </body>
-
 </html>
