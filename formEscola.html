@@ -10,21 +10,36 @@
     <script src="javascript/trocarTema.js" defer></script>
     <title>Formulário Corpo Docente</title>
     <link rel="stylesheet" href="css/estiloForm.css">
+    <link rel="stylesheet" href="css/estiloHeaders.css">
     <link rel="shortcut icon" href="logos/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <header>
-        <a href="index.html"><img src="logos/logoIF.png" alt="logo do Instituto Federal do Paraná" id="logo"></a>
-        <h1>Formulário Corpo Docente</h1>
-        <div>
-            <button title="trocar tema" class="trocarTema">
-                <img src="featherIcons/sun.svg" alt="símbolo do botão para trocar o tema do site">
-            </button>
-            <button title="página inicial" class="home">
-                <a href="index.html"><img src="featherIcons/home.svg" alt="símbolo do botão para voltar a página principal"></a>
-            </button>
+        <div id="titulo">
+            <a href="index.html"><img src="logos/logoIF.png" alt="logo do Instituto Federal do Paraná" id="logo"></a>
+            <h1>Formulário Corpo Docente</h1>
         </div>
+        <nav>
+            <div class="itemMenu">
+                <a href="index.html" title="página principal">
+                    <img src="featherIcons/home.svg" alt="símbolo do botão para voltar a página principal">
+                    HOME
+                </a>
+            </div>
+            <div class="itemMenu">
+                <a title="página de contato">
+                    <img src="featherIcons/phone.svg" alt="símbolo do botão para ir à página de contato">
+                    CONTATO
+                </a>
+            </div>
+            <div class="itemMenu">
+                <button title="trocar tema" class="trocarTema">
+                    <img src="featherIcons/sun.svg" alt="símbolo do botão para trocar o tema do site">
+                    TEMA
+                </button>
+            </div>
+        </nav>
     </header>
     <form action="formEstudantes.html" method="post">
         <div>

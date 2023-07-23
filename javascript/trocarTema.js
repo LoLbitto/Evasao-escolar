@@ -1,7 +1,6 @@
 "use strict";
 const rootHTML = document.querySelector(":root");
 const botaoTrocarTema = document.querySelector(".trocarTema");
-const imagemBotaoHome = document.querySelector(".home img");
 const imagemBotaoTema = document.querySelector(".trocarTema img");
 const logoIF = document.querySelector("#logo");
 if (!window.localStorage.getItem("tema")) {
@@ -27,38 +26,19 @@ const mudarTema = () => {
         window.localStorage.setItem("tema", "light");
         indexCor = 1;
     }
-    mudarLogo();
     mudarBotao();
     variaveisCSS.forEach(variavel => {
         rootHTML?.style.setProperty(variavel.nomeVar, variavel.valores[indexCor]);
     });
-};
-const mudarLogo = () => {
-    if (!logoIF) {
-        return;
-    }
-    const imagensLogo = ["logos/logoIF.png", "logos/logoIFDarkMode.png"];
-    if (window.localStorage.getItem("tema") == "light") {
-        logoIF.src = imagensLogo[1];
-        return;
-    }
-    logoIF.src = imagensLogo[0];
 };
 const mudarBotao = () => {
     if (!botaoTrocarTema || !imagemBotaoTema) {
         return;
     }
     const imagensBotaoTema = ["featherIcons/sun.svg", "featherIcons/moon.svg"];
-    const imagensBotaoHome = ["featherIcons/home.svg", "featherIcons/homeDarkMode.svg"];
     if (window.localStorage.getItem("tema") == "light") {
         imagemBotaoTema.src = imagensBotaoTema[1];
-        if (imagemBotaoHome) {
-            imagemBotaoHome.src = imagensBotaoHome[1];
-        }
         return;
-    }
-    if (imagemBotaoHome) {
-        imagemBotaoHome.src = imagensBotaoHome[0];
     }
     imagemBotaoTema.src = imagensBotaoTema[0];
 };
