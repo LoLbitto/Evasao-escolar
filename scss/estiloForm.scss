@@ -1,16 +1,6 @@
 @import "estilosFlex";
 @import "variaveisCSS";
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: var(--corFonte);
-}
-
-body {
-    background-color: var(--corFundo);
-}
+@import "estiloComum";
 
 form {
     @include flexColumn(center, initial);
@@ -24,8 +14,6 @@ form {
         border-radius: .7em;
         padding: 0.5em;
     }
-
-    input, button, select {color: var(--corFonteAlternativa);}
 
     input:not([type=radio]):not([type=checkbox]) {width: 100%;}
 
