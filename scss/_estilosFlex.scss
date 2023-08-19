@@ -4,3 +4,8 @@
     align-items: $align;
     justify-content: $justify;
 }
+
+@mixin flexRow($align, $justify) {
+    @include flexColumn($align, $justify);
+    flex-direction: row;
+}

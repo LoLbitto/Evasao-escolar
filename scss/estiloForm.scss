@@ -1,72 +1,6 @@
 @import "estilosFlex";
-
-:root {
-    --corBorda: #2f9e41;
-    --corBordaAlternativa: #d4d4d4;
-    --corFundo: #ffffff;
-    --corFonte: #000000;
-    --corLink: #2fcaca;
-    --corTituloDeGrupo: #696969;
-    --corFonteAlternativa: #413f3f;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --corFundo: #070707;
-        --corFonte: #ffffff;
-    }
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: var(--corFonte);
-}
-
-body {
-    background-color: var(--corFundo);
-}
-
-header {
-    width: 100%;
-    display: grid;
-    grid-template-rows: 100%;
-    grid-template-columns: 15% 70% 15%;
-    align-items: center;
-    border-bottom: solid var(--corBorda);
-    padding: .7em;
-
-    &>a{
-        width: 7em;
-
-        img {
-            height: 5em;
-            aspect-ratio: 4 / 3;
-            grid-column: 1;
-        }
-    }
-
-    h1 {
-        grid-column: 2;
-        text-align: center;
-    }
-
-    div {
-        align-self: flex-end;
-        justify-self: flex-end;
-        
-        button {
-            aspect-ratio: 1 / 1;
-            max-width: 2.5em;
-            background-color: var(--corFundo);
-
-            img {    
-                width: 100%;
-            }
-        }
-    }
-}
+@import "variaveisCSS";
+@import "estiloComum";
 
 form {
     @include flexColumn(center, initial);
@@ -80,8 +14,6 @@ form {
         border-radius: .7em;
         padding: 0.5em;
     }
-
-    input, button, select {color: var(--corFonteAlternativa);}
 
     input:not([type=radio]):not([type=checkbox]) {width: 100%;}
 

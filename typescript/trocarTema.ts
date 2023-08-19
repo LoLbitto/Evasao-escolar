@@ -1,6 +1,5 @@
 const rootHTML: HTMLElement | null = document.querySelector(":root")
 const botaoTrocarTema: HTMLButtonElement | null = document.querySelector(".trocarTema")
-const imagemBotaoHome: HTMLImageElement | null = document.querySelector(".home img")
 const imagemBotaoTema: HTMLImageElement | null = document.querySelector(".trocarTema img")
 const logoIF: HTMLImageElement | null = document.querySelector("#logo")
 
@@ -33,7 +32,6 @@ const mudarTema = () => {
         indexCor = 1 
     }
 
-    mudarLogo()
     mudarBotao()
 
     variaveisCSS.forEach(variavel => {
@@ -42,32 +40,16 @@ const mudarTema = () => {
 
 }
 
-const mudarLogo = () => {
-    if (!logoIF) { return }
-
-    const imagensLogo = ["logos/logoIF.png", "logos/logoIFDarkMode.png"]
-
-    if (window.localStorage.getItem("tema") == "light") {
-        logoIF.src = imagensLogo[1]
-        return
-    }
-
-    logoIF.src = imagensLogo[0]
-}
-
 const mudarBotao = () => {
     if (!botaoTrocarTema || !imagemBotaoTema) { return }
 
     const imagensBotaoTema = ["featherIcons/sun.svg", "featherIcons/moon.svg"]
-    const imagensBotaoHome = ["featherIcons/home.svg", "featherIcons/homeDarkMode.svg"]
 
     if (window.localStorage.getItem("tema") == "light") {
         imagemBotaoTema.src = imagensBotaoTema[1]
-        if (imagemBotaoHome) { imagemBotaoHome.src = imagensBotaoHome[1] }
         return
     }
 
-    if (imagemBotaoHome) { imagemBotaoHome.src = imagensBotaoHome[0] }
     imagemBotaoTema.src = imagensBotaoTema[0]
 }
 
