@@ -1,1 +1,75 @@
-:root{--corBorda: #2f9e41;--corBordaAlternativa: #d4d4d4;--corFundo: #ffffff;--corFundoAlternativa: #2f9e41;--corFonte: #000000;--corLink: #2fcaca;--corTituloDeGrupo: #696969;--corFonteAlternativa: #413f3f;--corHover: #cd191e;--tamanhoFonteHeader: 1em}@media(prefers-color-scheme: dark){:root{--corFundo: #070707;--corFonte: #ffffff}}*{margin:0;padding:0;box-sizing:border-box;color:var(--corFonte);background-color:var(--corFundo)}form{display:flex;flex-direction:column;align-items:center;justify-content:initial;width:100%;gap:1em;margin:.5em 0}form div:not(.seletor):not(.grupoDeOpcoes){width:90%;border:solid var(--corBorda);border-radius:.7em;padding:.5em}form input:not([type=radio]):not([type=checkbox]){width:100%}form div.escolhas,form div.seletorWrapper,form div.opcoes{display:grid;grid-template-columns:100%}form h4{color:var(--corTituloDeGrupo)}form button{width:90%}form button#limparForm{width:100%}form span.valorMenu{border:solid var(--corBordaAlternativa);padding:.2em;width:100%}form div.seletor,form div.grupoDeOpcoes{display:flex;flex-direction:column;align-items:unset;justify-content:unset}form div.seletor button,form div.grupoDeOpcoes button{width:100%}form select{width:100%}
+:root {
+  --corBorda: #2f9e41;
+  --corBordaAlternativa: #d4d4d4;
+  --corFundo: #ffffff;
+  --corFundoAlternativa: #2f9e41;
+  --corFonte: #000000;
+  --corLink: #2fcaca;
+  --corTituloDeGrupo: #696969;
+  --corFonteAlternativa: #413f3f;
+  --corHover: #cd191e;
+  --tamanhoFonteHeader: 1em;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --corFundo: #070707;
+    --corFonte: #ffffff;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--corFonte);
+  background-color: var(--corFundo);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: initial;
+  width: 100%;
+  gap: 1em;
+  margin: 0.5em 0;
+}
+form div:not(.seletor):not(.grupoDeOpcoes) {
+  width: 90%;
+  border: solid var(--corBorda);
+  border-radius: 0.7em;
+  padding: 0.5em;
+}
+form input:not([type=radio]):not([type=checkbox]) {
+  width: 100%;
+}
+form div.escolhas, form div.seletorWrapper, form div.opcoes {
+  display: grid;
+  grid-template-columns: 100%;
+}
+form h4 {
+  color: var(--corTituloDeGrupo);
+}
+form button {
+  width: 90%;
+}
+form button#limparForm {
+  width: 100%;
+}
+form span.valorMenu {
+  border: solid var(--corBordaAlternativa);
+  padding: 0.2em;
+  width: 100%;
+}
+form div.seletor, form div.grupoDeOpcoes {
+  display: flex;
+  flex-direction: column;
+  align-items: unset;
+  justify-content: unset;
+}
+form div.seletor button, form div.grupoDeOpcoes button {
+  width: 100%;
+}
+form select {
+  width: 100%;
+}

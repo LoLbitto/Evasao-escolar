@@ -2,7 +2,7 @@
 
 header {
     grid-row: 1;
-    grid-column:  1 / 3;
+    grid-column: 1 / 3;
     display: grid;
     grid-template-rows: 80% 20%;
 
@@ -49,7 +49,8 @@ header {
             width: 100%;
             height: 100%;
 
-            a, button {
+            a,
+            button {
                 @include flexRow(center, center);
                 align-self: center;
                 justify-self: center;
@@ -60,17 +61,48 @@ header {
                 color: #ffffff;
                 font-size: var(--tamanhoFonteHeader);
 
-                &, img {
+                &,
+                img {
                     height: 100%;
                     background-color: var(--corFundoAlternativa);
                 }
 
                 &:hover {
-                    &, * {
+
+                    &,
+                    * {
                         background-color: var(--corHover);
                     }
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    header {
+        grid-template-rows: initial;
+
+        nav {
+            flex-direction: column;
+
+            div a,
+            div button {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 40% 60%;
+                text-align: left;
+
+                img {
+                    justify-self: center;
+                }
+            }
+        }
+    }
+
+    div#forms {
+        width: 100%;
+        grid-column: 1 / 3;
+        text-align: center;
     }
 }
