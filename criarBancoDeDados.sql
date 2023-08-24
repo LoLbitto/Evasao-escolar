@@ -4,7 +4,7 @@ default collate utf8_general_ci;
 
 use estudantes;
 
-create table dados(
+create table ALUNO(
 `UF(Unidade Federativa/ Unidade da Federação)` varchar(19),
 `Cidade` varchar(32),
 `Escola` varchar(100),
@@ -21,19 +21,19 @@ create database escolas
 default character set utf8
 default collate utf8_general_ci;
 
-use escolas;
+use estudantes;
 
 create table ESCOLA(
-`UF(Unidade Federativa/ Unidade da Federação) –` varchar(19),
-`Cidade –` varchar(32),
-`Escola –` varchar(100),
-`Estudante –` TINYTEXT,
-`Matrícula –` INT ,
-`Desempenho Escolar –` TINYINT,
-`Neuro Divergência -` TINYINT,
+`UF(Unidade Federativa/ Unidade da Federação)` varchar(19),
+`Cidade` varchar(32),
+`Escola` varchar(100),
+`Estudante` TINYTEXT,
+`Matrícula` INT ,
+`Desempenho Escolar` TINYINT,
+`Neuro Divergência` TINYINT,
 `Situação` TINYTEXT default null,
-`ID –` smallint NOT NULL ,
-Primary key (`ID –`)
+`ID` smallint NOT NULL ,
+Primary key (`ID`)
 )default charset = utf8;
 
 create user  'usuario_pj_evasao' @'localhost' identified by 'pãocombife';
