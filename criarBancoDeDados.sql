@@ -17,12 +17,6 @@ create table ALUNO(
 Primary key (`ID`)
 )default charset = utf8;
 
-create database escolas
-default character set utf8
-default collate utf8_general_ci;
-
-use estudantes;
-
 create table ESCOLA(
 `UF(Unidade Federativa/ Unidade da Federação)` varchar(19),
 `Cidade` varchar(32),
@@ -38,5 +32,5 @@ Primary key (`ID`)
 
 create user  'usuario_pj_evasao' @'localhost' identified by 'pãocombife';
 
-grant select, insert on escolas.ESCOLA to  'usuario_pj_evasao' @'localhost';
-grant select, insert on estudantes.DADOS to  'usuario_pj_evasao' @'localhost';
+grant select, insert, update on estudantes.ESCOLA to  'usuario_pj_evasao' @'localhost';
+grant select, insert, update on estudantes.DADOS to  'usuario_pj_evasao' @'localhost';
