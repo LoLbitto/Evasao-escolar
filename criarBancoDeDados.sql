@@ -6,10 +6,11 @@ use estudantes;
 
 create table ALUNO(
 `UF(Unidade Federativa/ Unidade da Federação)` varchar(19),
-`Cidade` varchar(32),
+`Cidade` varchar(32), 
 `Escola` varchar(100),
 `Estudante` TINYTEXT,
 `Matrícula` INT ,
+`Desempenho Escolar` TINYINT,
 `Renda` decimal (8, 2),
 `Neuro Divergência` TINYINT,
 `ID` smallint NOT NULL AUTO_INCREMENT ,
@@ -26,6 +27,7 @@ create table ESCOLA(
 `Desempenho Escolar` TINYINT,
 `Neuro Divergência` TINYINT,
 `Situação` TINYTEXT default null,
+`Desempenho Escolar` TINYINT,
 `ID` smallint NOT NULL ,
 Primary key (`ID`)
 )default charset = utf8;
