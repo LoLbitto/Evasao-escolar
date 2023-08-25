@@ -25,7 +25,6 @@ create table ESCOLA(
 `Estudante` TINYTEXT,
 `Matrícula` INT ,
 `Desempenho Escolar` TINYINT,
-`Renda` DECIMAL (8, 2),
 `Neuro Divergência` TINYINT,
 `Situação` TINYTEXT DEFAULT NULL,
 `ID` SMALLINT NOT NULL AUTO_INCREMENT ,
