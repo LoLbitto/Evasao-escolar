@@ -13,7 +13,7 @@ create table ALUNO(
 `Desempenho Escolar` TINYINT,
 `Renda` DECIMAL (8, 2),
 `Neuro Divergência` TINYINT,
-`Situação` TINYTEXT DEFAULT NULL,
+`Situação` FLOAT DEFAULT NULL,
 `ID` SMALLINT NOT NULL AUTO_INCREMENT ,
 Primary key (`ID`)
 )default charset = utf8;
@@ -26,7 +26,7 @@ create table ESCOLA(
 `Matrícula` INT ,
 `Desempenho Escolar` TINYINT,
 `Neuro Divergência` TINYINT,
-`Situação` TINYTEXT DEFAULT NULL,
+`Situação` FLOAT DEFAULT NULL,
 `ID` SMALLINT NOT NULL AUTO_INCREMENT ,
 Primary key (`ID`)
 )default charset = utf8;
