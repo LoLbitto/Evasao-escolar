@@ -27,7 +27,6 @@ create table ESCOLA(
 `Desempenho Escolar` TINYINT,
 `Neuro Divergência` TINYINT,
 `Situação` TINYTEXT default null,
-`Desempenho Escolar` TINYINT,
 `ID` smallint NOT NULL ,
 Primary key (`ID`)
 )default charset = utf8;
