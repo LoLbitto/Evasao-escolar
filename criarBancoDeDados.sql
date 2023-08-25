@@ -5,29 +5,30 @@ default collate utf8_general_ci;
 use estudantes;
 
 create table ALUNO(
-`UF(Unidade Federativa/ Unidade da Federação)` varchar(19),
-`Cidade` varchar(32), 
-`Escola` varchar(100),
+`UF(Unidade Federativa/ Unidade da Federação)` VARCHAR(19),
+`Cidade` VARCHAR(32), 
+`Escola` VARCHAR(100),
 `Estudante` TINYTEXT,
 `Matrícula` INT ,
 `Desempenho Escolar` TINYINT,
-`Renda` decimal (8, 2),
+`Renda` DECIMAL (8, 2),
 `Neuro Divergência` TINYINT,
-`ID` smallint NOT NULL AUTO_INCREMENT ,
-`Situação` TINYTEXT default null,
+`Situação` TINYTEXT DEFAULT NULL,
+`ID` SMALLINT NOT NULL AUTO_INCREMENT ,
 Primary key (`ID`)
 )default charset = utf8;
 
 create table ESCOLA(
-`UF(Unidade Federativa/ Unidade da Federação)` varchar(19),
-`Cidade` varchar(32),
-`Escola` varchar(100),
+`UF(Unidade Federativa/ Unidade da Federação)` VARCHAR(19),
+`Cidade` VARCHAR(32),
+`Escola` VARCHAR(100),
 `Estudante` TINYTEXT,
 `Matrícula` INT ,
 `Desempenho Escolar` TINYINT,
+`Renda` DECIMAL (8, 2),
 `Neuro Divergência` TINYINT,
-`Situação` TINYTEXT default null,
-`ID` smallint NOT NULL ,
+`Situação` TINYTEXT DEFAULT NULL,
+`ID` SMALLINT NOT NULL AUTO_INCREMENT ,
 Primary key (`ID`)
 )default charset = utf8;
 
