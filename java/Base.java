@@ -24,7 +24,7 @@ public class Base{
         fis.setVariable("distancia", Double.parseDouble(JOptionPane.showInputDialog("Insira a distância até a escola: ")));
         fis.setVariable("neuro", Integer.parseInt(JOptionPane.showInputDialog("o aluno possui alguma neuro divergencia? 1- sim 0- não: ")));
 
-        // Evaluate
+        //calcula a situação
         fis.evaluate();
 
         //mostra os gráficos
