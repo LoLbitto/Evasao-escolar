@@ -21,10 +21,11 @@ public class Base{
 
         // Dá os valores para as variáveis
         fis.setVariable("renda", Double.parseDouble(JOptionPane.showInputDialog("Insira a renda por cabeça da familia: ")));
-        fis.setVariable("distancia", Double.parseDouble(JOptionPane.showInputDialog("Insira a distância até a escola: ")));
+        //no desempenho terão meios termos entre "bom" e "medio" e entre "ruim" e "medio", então use um Double, aqui é só exemplo
+        fis.setVariable("desempenho", Integer.parseInt(JOptionPane.showInputDialog("Insira o desempenho do aluno\n1-bom\n2-medio\n3-ruim: ")));
         fis.setVariable("neuro", Integer.parseInt(JOptionPane.showInputDialog("o aluno possui alguma neuro divergencia? 1- sim 0- não: ")));
 
-        //calcula a situação
+        // Evaluate
         fis.evaluate();
 
         //mostra os gráficos
