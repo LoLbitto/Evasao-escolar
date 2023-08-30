@@ -22,8 +22,8 @@ FUNCTION_BLOCK medidor
 	END_FUZZIFY
 
 	FUZZIFY neuro
-		TERM nao := (0, 0);
-		TERM sim := (1, 1);
+		TERM nao := 0;
+		TERM sim := 1;
 	END_FUZZIFY
 
 	DEFUZZIFY situacao
