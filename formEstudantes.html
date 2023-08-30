@@ -126,30 +126,23 @@
                 Renda familiar:
                 <select name="rendaFamiliar" required>
                     <option value="" disabled selected>Selecione um intervalo de renda</option>
-                    <option value="0-500">R$0,00 - R$500,99</option>
-                    <option value="501-1000">R$501,00 - R$1000,99</option>
-                    <option value="1001-1500">R$1001,00 - R$1500,99</option>
-                    <option value="1501-2000">R$1501,00 - R$2000,99</option>
-                    <option value="2001-2500">R$2001,00 - R$2500,99</option>
-                    <option value="2501-3000">R$2501,00 - R$3000,99</option>
-                    <option value="3001+">Mais que R$3001</option>
                 </select>
             </label>
         </div>
         <div class="opcoes">
             Desempenho escolar:
-            <label><input type="radio" name="desempenho" value="1.0" required>muito bom</label>
-            <label><input type="radio" name="desempenho" value="0.8">bom</label>
-            <label><input type="radio" name="desempenho" value="0.5">mais ou menos</label>
-            <label><input type="radio" name="desempenho" value="0.2">ruim</label>
-            <label><input type="radio" name="desempenho" value="0.0">muito ruim</label>
+            <label><input type="radio" name="desempenho" value="10" required>muito bom</label>
+            <label><input type="radio" name="desempenho" value="8">bom</label>
+            <label><input type="radio" name="desempenho" value="5">mais ou menos</label>
+            <label><input type="radio" name="desempenho" value="2">ruim</label>
+            <label><input type="radio" name="desempenho" value="0">muito ruim</label>
         </div>
         <div class="opcoes">
             Apresenta sinais de neuro divergência?
             <label><input type="radio" name="sinais_de_neuro_divergencia" value="0" required>não</label>
             <label><input type="radio" name="sinais_de_neuro_divergencia" value="1">sim</label>
-            <label><input type="radio" name="sinais_de_neuro_divergencia" value="2">prefiro não dizer</label>
-            <label><input type="radio" name="sinais_de_neuro_divergencia" value="3">não sei</label>
+            <label><input type="radio" name="sinais_de_neuro_divergencia" value="0.5">prefiro não dizer</label>
+            <label><input type="radio" name="sinais_de_neuro_divergencia" value="0.25">não sei</label>
         </div>
         <button id="enviarForm">ENVIAR</button>
     </form>

@@ -1,6 +1,7 @@
 "use strict";
 const seletores = document.querySelectorAll(".seletor");
 const butoesFecharSeletor = document.querySelectorAll(".seletor button");
+const seletorRenda = document.querySelector("select[name=rendaFamiliar]");
 const caixasDeBusca = document.querySelectorAll(".busca");
 const valoresMenus = document.querySelectorAll(".valorMenu");
 const butaoLimparForm = document.querySelector("#limparForm");
@@ -49,6 +50,29 @@ const adicionarOpcao = (tagPai, valorOpcao, textoOpcao, classeElemento, nomeRadi
     labelTag.appendChild(inputTag);
     labelTag.appendChild(inputTagTexto);
     tagPai.appendChild(labelTag);
+};
+const criarOpcoesRenda = () => {
+    if (!seletorRenda) {
+        return;
+    }
+    let rangeValue = "";
+    let valor = 0;
+    const VALOR_MAXIMO = 3000;
+    const STEP = 199;
+    while (valor < VALOR_MAXIMO) {
+        rangeValue = "R$" + valor.toString();
+        valor += STEP + 0.99;
+        rangeValue += ' - R$' + valor.toString();
+        let optionTag = document.createElement("option");
+        optionTag.text = rangeValue;
+        optionTag.value = rangeValue;
+        seletorRenda.appendChild(optionTag);
+        valor += 0.01;
+    }
+    let optionTag = document.createElement("option");
+    optionTag.text = `Mais que R$${valor}`;
+    optionTag.value = `${valor}+`;
+    seletorRenda.appendChild(optionTag);
 };
 const limparForm = () => {
     if (form == null) {

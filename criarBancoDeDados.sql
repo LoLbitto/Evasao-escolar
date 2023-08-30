@@ -11,8 +11,8 @@ create table ALUNO(
 `Estudante` TINYTEXT,
 `Matrícula` INT ,
 `Desempenho Escolar` TINYINT,
-`Renda` DECIMAL (8, 2),
-`Neuro Divergência` TINYINT,
+`Renda` VARCHAR(9),
+`Neuro Divergência` DECIMAL(2, 1),
 `Situação` FLOAT DEFAULT NULL,
 `ID` SMALLINT NOT NULL AUTO_INCREMENT ,
 Primary key (`ID`)
@@ -25,7 +25,7 @@ create table ESCOLA(
 `Estudante` TINYTEXT,
 `Matrícula` INT ,
 `Desempenho Escolar` TINYINT,
-`Neuro Divergência` TINYINT,
+`Neuro Divergência` DECIMAL (2, 1),
 `Situação` FLOAT DEFAULT NULL,
 `ID` SMALLINT NOT NULL AUTO_INCREMENT ,
 Primary key (`ID`)
