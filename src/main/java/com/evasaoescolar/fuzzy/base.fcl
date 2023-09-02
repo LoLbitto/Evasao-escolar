@@ -1,0 +1,55 @@
+FUNCTION_BLOCK medidor
+	VAR_INPUT
+		renda : REAL;
+		desempenho : REAL;
+		neuro : REAL;
+	END_VAR
+
+	VAR_OUTPUT
+		situacao : REAL;
+	END_VAR
+
+	FUZZIFY renda
+		TERM baixa := (0,1) (500, 0);
+		TERM media := (400, 0) (600, 1) (800, 1) (1000, 0);
+		TERM alta := (900, 0) (1100, 1);
+	END_FUZZIFY
+
+	FUZZIFY desempenho
+		TERM bom := 1;
+		TERM medio := 2;
+		TERM ruim := 3;
+	END_FUZZIFY
+
+	FUZZIFY neuro
+		TERM nao := 0;
+		TERM sim := 1;
+	END_FUZZIFY
+
+	DEFUZZIFY situacao
+		TERM boa := -25;
+		TERM media := 50;
+		TERM ruim := 137.5;
+		METHOD : COGS;
+		DEFAULT := 50; 
+	END_DEFUZZIFY
+
+	RULEBLOCK No1
+		AND : MIN;
+		OR : MAX;
+		ACT : MIN;
+		ACCU : MAX;
+
+		RULE 1 : IF (renda IS baixa) AND NOT (desempenho IS ruim) THEN situacao IS ruim WITH 0.5;
+		RULE 2 : IF (desempenho IS ruim) AND NOT (renda IS baixa) THEN situacao IS ruim WITH 0.1;
+		RULE 3 : IF (desempenho IS ruim) AND (renda IS baixa) THEN situacao IS ruim;
+		RULE 4 : IF (renda IS media) AND NOT (desempenho IS medio) THEN situacao IS media WITH 0.5;
+		RULE 5 : IF (desempenho IS medio) AND NOT (renda IS media) THEN situacao IS media WITH 0.1;
+		RULE 6 : IF (desempenho IS medio) AND (renda IS media) THEN situacao IS media;
+		RULE 7 : IF (renda IS alta) THEN situacao IS boa;
+		RULE 8 : IF (desempenho IS bom) THEN situacao IS boa WITH 0.75;
+		RULE 9 : IF (neuro IS nao) THEN situacao IS boa;
+		RULE 10 : IF (neuro IS sim) THEN situacao IS ruim WITH 0.2;
+
+	END_RULEBLOCK
+END_FUNCTION_BLOCK

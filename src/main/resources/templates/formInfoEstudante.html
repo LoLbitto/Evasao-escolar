@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="dark light">
-    <script src="javascript/formEstudantes.js" defer></script>
-    <script src="javascript/formUtils.js" defer></script>
-    <script src="javascript/trocarTema.js" defer></script>
-    <title>Formulário Corpo Docente</title>
-    <link rel="stylesheet" href="css/estiloForm.css">
-    <link rel="stylesheet" href="css/estiloHeaders.css">
-    <link rel="shortcut icon" href="logos/favicon.ico" type="image/x-icon">
+    <script src="../static/javascript/formUtils.js" defer></script>
+    <script src="../static/javascript/formInfoEstudante.js" defer></script>
+    <script src="../static/javascript/trocarTema.js" defer></script>
+    <title>Solicitar Informações de um Estudante</title>
+    <link rel="stylesheet" href="../static/css/estiloForm.css">
+    <link rel="stylesheet" href="../static/css/estiloHeaders.css">
+    <link rel="shortcut icon" href="../static/logos/favicon.ico" type="image/x-icon">
 </head>
-
 <body>
     <header>
         <div id="titulo">
-            <a href="index.html"><img src="logos/logoIF.png" alt="logo do Instituto Federal do Paraná" id="logo"></a>
-            <h1>Formulário Corpo Docente</h1>
+            <a href="index.html"><img src="../static/logos/logoIF.png" alt="logo do Instituto Federal do Paraná" id="logo"></a>
+            <h1>Solicitar Informações de um Estudante</h1>
         </div>
         <nav>
             <div class="itemMenu">
                 <a href="index.html" title="página principal">
-                    <img src="featherIcons/home.svg" alt="símbolo do botão para voltar a página principal">
+                    <img src="../static/featherIcons/home.svg" alt="símbolo do botão para voltar a página principal">
                     HOME
                 </a>
             </div>
             <div class="itemMenu">
                 <a href="contato.html" title="página de contato">
-                    <img src="featherIcons/phone.svg" alt="símbolo do botão para ir à página de contato">
+                    <img src="../static/featherIcons/phone.svg" alt="símbolo do botão para ir à página de contato">
                     CONTATO
                 </a>
             </div>
             <div class="itemMenu">
                 <button title="trocar tema" class="trocarTema">
-                    <img src="featherIcons/sun.svg" alt="símbolo do botão para trocar o tema do site">
+                    <img src="../static/featherIcons/sun.svg" alt="símbolo do botão para trocar o tema do site">
                     TEMA
                 </button>
             </div>
         </nav>
     </header>
-    <form action="formEstudantes.html" method="post">
+    <form action="formInfoEstudante.html" method="post">
         <div>
-            <button type="button" id="limparForm">Limpar Formulário</button>
+            <button type="button" id="limparForm">LIMPAR FORMULÁRIO</button>
         </div>
         <div class="seletorWrapper" id="seletorUFs">
             Estado/Unidade Federativa:
@@ -114,29 +111,26 @@
                 <span>Selecione uma Instituição de Ensino</span>
             </div>
         </div>
-        <div>
-            <label>Nome do estudante: <input type="text" name="nome" placeholder="Nome completo do estudante" required></label>
-        </div>
-        <div>
-            <label>Número de matrícula: <input type="number" name="numero_matricula" placeholder="Número de matrícula do estudante" required></label>
-        </div>
         <div class="opcoes">
-            Desempenho escolar:
-            <label><input type="radio" name="desempenho" value="1.0" required>muito bom</label>
-            <label><input type="radio" name="desempenho" value="0.8">bom</label>
-            <label><input type="radio" name="desempenho" value="0.5">mais ou menos</label>
-            <label><input type="radio" name="desempenho" value="0.2">ruim</label>
-            <label><input type="radio" name="desempenho" value="0.0">muito ruim</label>
+            Nome e/ou número de matrícula:
+            <label>
+                <input type="checkbox" name="nome_ou_matricula">nome
+            </label>
+            <label>
+                <input type="checkbox" name="nome_ou_matricula">número de matrícula
+            </label>
         </div>
-        <div class="opcoes">
-            Apresenta sinais de neuro divergência?
-            <label><input type="radio" name="sinais_de_neuro_divergencia" value="0" required>não</label>
-            <label><input type="radio" name="sinais_de_neuro_divergencia" value="1">sim</label>
-            <label><input type="radio" name="sinais_de_neuro_divergencia" value="2">prefiro não dizer</label>
-            <label><input type="radio" name="sinais_de_neuro_divergencia" value="3">não sei</label>
+        <div style="display: none;">
+            <label>Nome do estudante: 
+                <input type="text" name="nome_estudante" placeholder="Nome completo do estudante">
+            </label>
+        </div>
+        <div style="display: none;">
+            <label>Número de matrícula: 
+                <input type="number" name="numero_matricula" placeholder="Número de matrícula do estudante">
+            </label>
         </div>
         <button id="enviarForm">ENVIAR</button>
     </form>
-    
 </body>
 </html>

@@ -2,8 +2,8 @@
   "compilerOptions": {
     "target": "ESNext",                                  
     "module": "commonjs",                                
-    "rootDir": "./typescript",
-    "outDir": "./javascript", 
+    "rootDir": "./src/main/resources/static/typescript",
+    "outDir": "./src/main/resources/static/javascript", 
     "esModuleInterop": true,                         
     "forceConsistentCasingInFileNames": true,          
     "strict": true,                                    
