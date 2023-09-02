@@ -1,5 +1,6 @@
 const seletores: NodeListOf<HTMLDivElement> | null = document.querySelectorAll(".seletor")
-const butoesFecharSeletor: NodeListOf<HTMLButtonElement> | null = document.querySelectorAll(".seletor button") 
+const butoesFecharSeletor: NodeListOf<HTMLButtonElement> | null = document.querySelectorAll(".seletor button")
+const seletorRenda: HTMLSelectElement | null = document.querySelector("select[name=rendaFamiliar]") 
 const caixasDeBusca: NodeListOf<HTMLInputElement> | null = document.querySelectorAll(".busca")
 const valoresMenus: NodeListOf<HTMLSpanElement> | null = document.querySelectorAll(".valorMenu")
 const butaoLimparForm: HTMLButtonElement | null = document.querySelector("#limparForm")
@@ -63,6 +64,31 @@ const adicionarOpcao = (
     labelTag.appendChild(inputTagTexto)
     tagPai.appendChild(labelTag)
 }
+
+const criarOpcoesRenda = () => {
+    if (!seletorRenda) { return }
+
+    let rangeValue = ""
+    let valor = 0
+    const VALOR_MAXIMO = 3000
+    const STEP = 199
+
+    while (valor < VALOR_MAXIMO) {
+        rangeValue = "R$" + valor.toString()
+        valor += STEP + 0.99
+        rangeValue += ' - R$' + valor.toString()
+        let optionTag: HTMLOptionElement = document.createElement("option")
+        optionTag.text = rangeValue
+        optionTag.value = rangeValue
+        seletorRenda.appendChild(optionTag) 
+        valor += 0.01
+    }
+
+    let optionTag: HTMLOptionElement = document.createElement("option")
+    optionTag.text = `Mais que R$${valor}`
+    optionTag.value = `${valor}+`
+    seletorRenda.appendChild(optionTag)
+} 
 
 // Utilidade comuns dos formulários
 // Reseta o formulário completamente.
@@ -180,3 +206,4 @@ butaoLimparForm?.addEventListener("click", limparForm)
 seletores[0]?.addEventListener("click", seletorUnidadeFedarativaCallback)
 seletores[1]?.addEventListener("click", seletorCidadeCallback)
 seletorUnidadeFedarativaCallback()
+criarOpcoesRenda()
