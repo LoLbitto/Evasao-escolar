@@ -36,8 +36,8 @@ const mudarBotao = () => {
         return;
     }
     const imagensBotaoTema = [
-        "../static/featherIcons/sun.svg",
-        "../static/featherIcons/moon.svg"
+        "../featherIcons/sun.svg",
+        "../featherIcons/moon.svg"
     ];
     if (window.localStorage.getItem("tema") == "light") {
         imagemBotaoTema.src = imagensBotaoTema[1];
