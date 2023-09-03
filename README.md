@@ -4,8 +4,16 @@ Projeto focado em calcular a probabilidade de evasão escolar de um aluno
 Organização do projeto
 
 - Diretório principal
-    - <código do site>
-    - java
-        - <código do programa em java>
-    - database
-        - <código do banco de dados>
+    - criarBancoDeDados.sql
+    - pom.xml
+    - README.md
+    - tsconfig.json
+    - src
+        - main
+            - java 
+                - com.evasaoescolar.fuzzy
+            
+            - resources
+                - static
+                - templates
+ 

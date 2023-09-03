@@ -5,38 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="dark light">
-    <script src="javascript/formUtils.js" defer></script>
-    <script src="javascript/trocarTema.js" defer></script>
+    <script src="../javascript/formUtils.js" defer></script>
+    <script src="../javascript/trocarTema.js" defer></script>
     <title>Formulário Estudantes</title>
-    <link rel="stylesheet" href="css/estiloForm.css">
-    <link rel="stylesheet" href="css/estiloHeaders.css">
-    <link rel="shortcut icon" href="logos/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estiloForm.css">
+    <link rel="stylesheet" href="../css/estiloHeaders.css">
+    <link rel="shortcut icon" href="../logos/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <header>
         <div id="titulo">
             <a href="index.html">
-                <img src="logos/logoIF.png" alt="logo do Instituto Federal do Paraná" id="logo">
+                <img src="../logos/logoIF.png" alt="logo do Instituto Federal do Paraná" id="logo">
             </a>
             <h1>Formulário Estudantes</h1>
         </div>
         <nav>
             <div class="itemMenu">
                 <a href="index.html" title="página principal">
-                    <img src="featherIcons/home.svg" alt="símbolo do botão para voltar a página principal">
+                    <img src="../featherIcons/home.svg" alt="símbolo do botão para voltar a página principal">
                     HOME
                 </a>
             </div>
             <div class="itemMenu">
                 <a href="contato.html" title="página de contato">
-                    <img src="featherIcons/phone.svg" alt="símbolo do botão para ir à página de contato">
+                    <img src="../featherIcons/phone.svg" alt="símbolo do botão para ir à página de contato">
                     CONTATO
                 </a>
             </div>
             <div class="itemMenu">
                 <button title="trocar tema" class="trocarTema">
-                    <img src="featherIcons/sun.svg" alt="símbolo do botão para trocar o tema do site">
+                    <img src="../featherIcons/sun.svg" alt="símbolo do botão para trocar o tema do site">
                     TEMA
                 </button>
             </div>
@@ -126,30 +126,23 @@
                 Renda familiar:
                 <select name="rendaFamiliar" required>
                     <option value="" disabled selected>Selecione um intervalo de renda</option>
-                    <option value="0-500">R$0,00 - R$500,99</option>
-                    <option value="501-1000">R$501,00 - R$1000,99</option>
-                    <option value="1001-1500">R$1001,00 - R$1500,99</option>
-                    <option value="1501-2000">R$1501,00 - R$2000,99</option>
-                    <option value="2001-2500">R$2001,00 - R$2500,99</option>
-                    <option value="2501-3000">R$2501,00 - R$3000,99</option>
-                    <option value="3001+">Mais que R$3001</option>
                 </select>
             </label>
         </div>
         <div class="opcoes">
             Desempenho escolar:
-            <label><input type="radio" name="desempenho" value="1.0" required>muito bom</label>
-            <label><input type="radio" name="desempenho" value="0.8">bom</label>
-            <label><input type="radio" name="desempenho" value="0.5">mais ou menos</label>
-            <label><input type="radio" name="desempenho" value="0.2">ruim</label>
-            <label><input type="radio" name="desempenho" value="0.0">muito ruim</label>
+            <label><input type="radio" name="desempenho" value="10" required>muito bom</label>
+            <label><input type="radio" name="desempenho" value="8">bom</label>
+            <label><input type="radio" name="desempenho" value="5">mais ou menos</label>
+            <label><input type="radio" name="desempenho" value="2">ruim</label>
+            <label><input type="radio" name="desempenho" value="0">muito ruim</label>
         </div>
         <div class="opcoes">
             Apresenta sinais de neuro divergência?
             <label><input type="radio" name="sinais_de_neuro_divergencia" value="0" required>não</label>
             <label><input type="radio" name="sinais_de_neuro_divergencia" value="1">sim</label>
-            <label><input type="radio" name="sinais_de_neuro_divergencia" value="2">prefiro não dizer</label>
-            <label><input type="radio" name="sinais_de_neuro_divergencia" value="3">não sei</label>
+            <label><input type="radio" name="sinais_de_neuro_divergencia" value="0.5">prefiro não dizer</label>
+            <label><input type="radio" name="sinais_de_neuro_divergencia" value="0.25">não sei</label>
         </div>
         <button id="enviarForm">ENVIAR</button>
     </form>
