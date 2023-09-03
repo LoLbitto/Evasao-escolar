@@ -28,5 +28,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
+		<dependency>
+			<groupId>net.source.jFuzzyLogic</groupId>
+			<artifactId>jFuzzyLogic</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/jFuzzyLogic.jar</systemPath>
+		</dependency>
 	</dependencies>
 </project>
