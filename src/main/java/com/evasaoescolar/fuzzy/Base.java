@@ -1,3 +1,5 @@
+package com.evasaoescolar.fuzzy;
+
 import net.sourceforge.jFuzzyLogic.FIS;
 import net.sourceforge.jFuzzyLogic.plot.*;
 import net.sourceforge.jFuzzyLogic.rule.Variable;
