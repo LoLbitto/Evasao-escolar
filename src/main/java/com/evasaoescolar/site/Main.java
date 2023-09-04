@@ -13,22 +13,22 @@ public class Main {
         return "index";
     }
 
-    @RequestMapping("/contato.html")
+    @RequestMapping({"/contato.html", "/contato"})
     String contato() {
         return "contato";
     }
 
-    @RequestMapping("/formEstudantes.html")
+    @RequestMapping({"/formEstudantes.html", "/formEstudantes", "/formestudantes.html", "/formestudantes"})
     String formEstudantes() {
         return "formEstudantes";
     }
 
-    @RequestMapping("/formEscola.html")
+    @RequestMapping({"/formEscola.html", "/formEscola", "/formescola.html", "/formescola"})
     String formEscola() {
         return "formEscola";
     }
 
-    @RequestMapping("/formInfoEstudante.html")
+    @RequestMapping({"/formInfoEstudante.html", "/formInfoEstudantes", "/forminfoestudantes.html", "/forminfoestudantes"})
     String formInfo() {
         return "formInfoEstudante";
     }
