@@ -7,11 +7,35 @@ import java.security.SecureRandom;
 
 public class DataHasher {
 
-    private static byte[] saltGenerator() {
+    public static byte[] saltGenerator() {
         SecureRandom randomGenerator = new SecureRandom();
         byte[] salt = new byte[16];
-        randomGenerator.nextBytes(salt);
+
+        for (int i = 0; i < salt.length; i++) {
+            salt[i] = (byte) ((byte) randomGenerator.nextInt(95) + 32);
+        }
+
         return salt;
+    }
+
+    public static String saltToString(byte[] salt) {
+        StringBuilder saltString = new StringBuilder();
+
+        for (byte saltByte: salt) {
+            saltString.append((char) (saltByte & 0xFF));
+        }
+
+        return saltString.toString();
+    }
+
+    public static byte[] saltToBytes (String salt) {
+        byte[] saltBytes = new byte[salt.length()];
+
+        for (int i = 0; i < salt.length(); i++) {
+            saltBytes[i] = ((byte) salt.charAt(i));
+        }
+        
+        return saltBytes;
     }
 
     public static String stringToHashString(String originalString, byte[] salt) throws NoSuchAlgorithmException {
