@@ -40,6 +40,10 @@ form div:not(.seletor):not(.grupoDeOpcoes) {
   border-radius: 0.7em;
   padding: 0.5em;
 }
+form div#email, form div#telefone {
+  position: absolute;
+  z-index: -1;
+}
 form input:not([type=radio]):not([type=checkbox]) {
   width: 100%;
 }
