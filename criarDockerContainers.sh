@@ -13,4 +13,4 @@ if ! [ "$resultado_checksum" == "openjdk-20.0.2_linux-x64_bin.tar.gz: OK" ]; the
     exit 1
 fi
 
-docker build --pull --rm -f "dockerfile" -t evasaoescolar:latest "."
+docker compose -f "docker-compose.yaml" up -d --build
