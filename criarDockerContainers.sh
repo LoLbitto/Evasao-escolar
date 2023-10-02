@@ -1,3 +1,5 @@
+#! /bin/bash
+
 OPENJDK_TAR=./openjdk-20.0.2_linux-x64_bin.tar.gz
 
 if [ -f "$OPENJDK_TAR" ]; then
