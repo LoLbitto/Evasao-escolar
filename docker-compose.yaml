@@ -14,8 +14,13 @@ services:
 
   mysql-server:
     image: mysql:8.0.19
+    ports:
+      - "3306:3306"
     volumes:
       - estudantes-mysql-data:/var/lib/mysql
+      - "./src/main/resources/scripts_database/criarBancoDeDados.sql:/docker-entrypoint-initdb.d/init0.sql"
+      - "./src/main/resources/scripts_database/criarTabelas.sql:/docker-entrypoint-initdb.d/init1.sql"
+      - "./src/main/resources/scripts_database/criarUsuario.sql:/docker-entrypoint-initdb.d/init2.sql"
     environment:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: estudantes
