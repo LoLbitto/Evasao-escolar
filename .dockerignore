@@ -1,0 +1,15 @@
+.idea
+.vscode
+node_modules
+target
+.gitignore
+mvnw.cmd
+package-lock.json
+package.json
+README.md
+tsconfig.json
+src/main/resources/static/scss
+src/main/resources/static/typescript
+src/main/resources/scripts_database
+openjdk sha-256 checksum.txt
+montarImagemDocker.sh
