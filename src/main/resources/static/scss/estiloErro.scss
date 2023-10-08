@@ -1,0 +1,26 @@
+@import "estiloComum";
+@import "estilosFlex";
+@import "variaveisCSS";
+
+body {
+    @include flexColumn(center, center);
+}
+
+header {
+    @include flexRow(center, center);
+
+    width: 100%;
+
+    &, img, h1 {
+        background-color: var(--corFundoAlternativa);
+        color: #ffffff;
+    }
+}
+
+p { padding: 0.7em; }
+
+button {
+    * { text-decoration: none; }
+    padding: 0.7em;
+    &:hover { &, * { background-color: var(--corFundoAlternativa); }}
+}
