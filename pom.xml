@@ -14,7 +14,19 @@
 	<name>EvasaoEscolar</name>
 	<properties>
 		<java.version>20</java.version>
+		<start-class>com.evasaoescolar.site.Main</start-class>
 	</properties>
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<excludes>
+					<exclude>**/*.scss</exclude>
+					<exclude>**/*.ts</exclude>
+				</excludes>
+			</resource>
+		</resources>
+	</build>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
