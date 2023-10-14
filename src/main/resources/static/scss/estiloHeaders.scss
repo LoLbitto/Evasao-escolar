@@ -61,11 +61,7 @@ header {
                 color: #ffffff;
                 font-size: var(--tamanhoFonteHeader);
 
-                &,
-                img {
-                    height: 100%;
-                    background-color: var(--corFundoAlternativa);
-                }
+                &, img { background-color: var(--corFundoAlternativa); }
 
                 &:hover {
 

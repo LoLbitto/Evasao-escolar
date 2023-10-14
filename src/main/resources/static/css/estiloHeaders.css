@@ -62,11 +62,9 @@ header nav div button {
   color: #ffffff;
   font-size: var(--tamanhoFonteHeader);
 }
-header nav div a,
-header nav div a img,
+header nav div a, header nav div a img,
 header nav div button,
 header nav div button img {
-  height: 100%;
   background-color: var(--corFundoAlternativa);
 }
 header nav div a:hover,
