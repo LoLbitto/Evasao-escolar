@@ -9,7 +9,7 @@ if (-not(Test-Path -Path $arquivo -PathType Leaf )) {
 $hashEsperado=(Get-Content 'openjdk sha-256 checksum.txt').Split(' ')[0].ToUpper()
 $hashArquivo=(Get-FileHash openjdk-20.0.2_linux-x64_bin.tar.gz).Hash
 
-if ($hashEsperado -ne $hashEsperado) {
+if ($hashEsperado -ne $hashArquivo) {
     Write-Host "Algo aconteceu com o arquivo!"
     Exit
 } 
