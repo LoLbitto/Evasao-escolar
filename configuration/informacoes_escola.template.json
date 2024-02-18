@@ -1,11 +1,11 @@
 {
     "contato": {
         "nomeEscola": "placholder",
-        "endereço": "exemplo, 123, Curitiba, Paraná",
+        "endereco": "exemplo, 123, Curitiba, Paraná",
         "telefones": ["1234-5678"],
         "emails": ["exemplo@exemplo.com"]
     },
-    "envioDeInformações": {
+    "envioDeInformacoes": {
         "enviarPorEmail": true,
         "email": ""
     }
