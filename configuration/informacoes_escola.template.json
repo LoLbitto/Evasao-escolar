@@ -7,7 +7,6 @@
     },
     "envio_de_informações": {
         "enviar_por_email": true,
-        "e-mail": "",
-        "API_KEY": ""
+        "e-mail": ""
     }
 }
