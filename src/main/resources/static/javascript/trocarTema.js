@@ -28,7 +28,7 @@ const mudarTema = () => {
     }
     mudarBotao();
     variaveisCSS.forEach(variavel => {
-        rootHTML?.style.setProperty(variavel.nomeVar, variavel.valores[indexCor]);
+        rootHTML === null || rootHTML === void 0 ? void 0 : rootHTML.style.setProperty(variavel.nomeVar, variavel.valores[indexCor]);
     });
 };
 const mudarBotao = () => {
@@ -47,4 +47,4 @@ const mudarBotao = () => {
 };
 mudarTema();
 mudarTema();
-botaoTrocarTema?.addEventListener("click", mudarTema);
+botaoTrocarTema === null || botaoTrocarTema === void 0 ? void 0 : botaoTrocarTema.addEventListener("click", mudarTema);
