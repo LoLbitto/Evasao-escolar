@@ -34,6 +34,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        Configurador configurador = new Configurador();
+        var dados = configurador.configurar();
         SpringApplication.run(Main.class, args);
     }
 }
