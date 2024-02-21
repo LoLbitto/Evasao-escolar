@@ -12,6 +12,7 @@ header {
         grid-row: 1;
         padding: .7em;
         height: 100%;
+        background-color: var(--corFundoAlternativa);
 
         a {
             grid-column: 1;
@@ -34,6 +35,8 @@ header {
             grid-column: 2;
             text-align: center;
             align-self: center;
+            background-color: var(--corFundoAlternativa);
+            color: var(--corFonteAlternativa);
         }
     }
 
