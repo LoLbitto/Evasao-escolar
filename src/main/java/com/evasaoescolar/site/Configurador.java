@@ -1,6 +1,9 @@
 package com.evasaoescolar.site;
 
 import com.alibaba.fastjson.JSON;
+
+import org.springframework.ui.ModelMap;
+
 import java.util.ArrayList;
 import java.nio.file.Files;
 import java.io.File;
@@ -43,5 +46,12 @@ public class Configurador {
         }
 
         return dados;
+    }
+
+    public ModelMap configurarModelLogos(Logos logos, ModelMap model) {
+        model.addAttribute("favicon", logos.getFavicon());
+        model.addAttribute("maskicon", logos.getMaskIcon());
+        
+        return model;
     }
 }
