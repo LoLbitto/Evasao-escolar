@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="javascript/trocarTema.js" defer></script>
+    <script src="../javascript/carregarPaleta.js" defer></script>
+    <script src="../javascript/trocarTema.js" defer></script>
     <title>Formas de Contato</title>
     <link rel="stylesheet" href="../css/estiloHeaders.css">
     <link rel="stylesheet" href="../css/estiloContato.css">
@@ -14,6 +15,8 @@
 </head>
 
 <body>
+    <paleta-comum style="display: none" th:attr="data-variaveis=${paletaComum}"></paleta-comum>
+    <paleta-tema-escuro style="display: none" th:attr="data-variaveis=${paletaTemaEscuro}"></paleta-tema-escuro>
     <header>
         <div id="titulo">
             <h1 id="nome" th:text="${nome}"></h1>

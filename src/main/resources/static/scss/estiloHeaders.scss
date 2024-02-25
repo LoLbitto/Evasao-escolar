@@ -61,7 +61,7 @@ header {
                 text-decoration: none;
                 width: 100%;
                 padding: .2em;
-                color: #ffffff;
+                color: var(--corFonteAlternativa);
                 font-size: var(--tamanhoFonteHeader);
 
                 &, img { background-color: var(--corFundoAlternativa); }

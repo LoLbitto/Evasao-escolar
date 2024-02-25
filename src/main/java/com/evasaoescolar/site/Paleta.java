@@ -1,6 +1,50 @@
 package com.evasaoescolar.site;
 
-class Comum {
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+
+public class Paleta {
+    private Comum comum;
+    private TemaEscuro temaEscuro;
+
+    public Comum getComum() {
+        return comum;
+    }
+
+    public void setComum(Comum comum) {
+        this.comum = comum;
+    }
+
+    public TemaEscuro getTemaEscuro() {
+        return temaEscuro;
+    }
+
+    public void setTemaEscuro(TemaEscuro temaEscuro) {
+        this.temaEscuro = temaEscuro;
+    }
+}
+
+abstract class VariaveisCSS {
+    public ArrayList<String> pegarNomesVariaveis() {
+        ArrayList<String> variaveis = new ArrayList<>();
+
+        for (Field field : getClass().getDeclaredFields()) {
+            variaveis.add(String.format("--%s", field.getName()));
+        }
+
+        return variaveis;
+    }
+
+    public String converterParaGetVariavel(String nomeVariavel) {
+        String getNomeVariavel;
+
+        getNomeVariavel = "get" + nomeVariavel.substring(2, 3).toUpperCase() + nomeVariavel.substring(3);
+
+        return getNomeVariavel;
+    }
+}
+
+class Comum extends VariaveisCSS {
     private String corBorda;
     private String corBordaAlternativa;
     private String corFundo;
@@ -94,7 +138,7 @@ class Comum {
     }
 }
 
-class TemaEscuro {
+class TemaEscuro extends VariaveisCSS {
     private String corFundo;
     private String corFonte;
 
@@ -112,26 +156,5 @@ class TemaEscuro {
 
     public void setCorFonte(String corFonte) {
         this.corFonte = corFonte;
-    }
-}
-
-public class Paleta {
-    private Comum comum;
-    private TemaEscuro temaEscuro;
-
-    public Comum getComum() {
-        return comum;
-    }
-
-    public void setComum(Comum comum) {
-        this.comum = comum;
-    }
-
-    public TemaEscuro getTemaEscuro() {
-        return temaEscuro;
-    }
-
-    public void setTemaEscuro(TemaEscuro temaEscuro) {
-        this.temaEscuro = temaEscuro;
     }
 }

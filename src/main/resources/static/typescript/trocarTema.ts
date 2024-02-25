@@ -9,18 +9,6 @@ if (!window.localStorage.getItem("tema")){
 }
 
 
-const variaveisCSS = [
-    // light-claro | dark-escuro
-    {
-        "nomeVar": "--corFundo",
-        "valores": ["#ffffff", "#070707"]
-    },
-    {
-        "nomeVar": "--corFonte",
-        "valores": ["#000000", "#ffffff"]
-    }
-]
-
 const mudarTema = () => {
     let indexCor: 0 | 1
 
@@ -34,8 +22,8 @@ const mudarTema = () => {
 
     mudarBotao()
 
-    variaveisCSS.forEach(variavel => {
-        rootHTML?.style.setProperty(variavel.nomeVar, variavel.valores[indexCor])
+    temasVariaveisCSS.forEach(variavel => {
+        rootHTML?.style.setProperty(variavel.nomeVariavel, variavel.valores[indexCor])
     })
 
 }

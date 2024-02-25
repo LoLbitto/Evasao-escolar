@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="dark light">
     <script src="../javascript/formUtils.js" defer></script>
+    <script src="../javascript/carregarPaleta.js" defer></script>
     <script src="../javascript/trocarTema.js" defer></script>
     <title>Formulário Estudantes</title>
     <link rel="stylesheet" href="../css/estiloForm.css">
@@ -15,6 +16,8 @@
 </head>
 
 <body>
+    <paleta-comum style="display: none" th:attr="data-variaveis=${paletaComum}"></paleta-comum>
+    <paleta-tema-escuro style="display: none" th:attr="data-variaveis=${paletaTemaEscuro}"></paleta-tema-escuro>
     <header>
         <div id="titulo">
             <h1>Formulário Estudantes</h1>

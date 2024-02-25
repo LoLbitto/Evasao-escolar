@@ -6,16 +6,6 @@ const logoIF = document.querySelector("#logo");
 if (!window.localStorage.getItem("tema")) {
     window.localStorage.setItem("tema", matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark");
 }
-const variaveisCSS = [
-    {
-        "nomeVar": "--corFundo",
-        "valores": ["#ffffff", "#070707"]
-    },
-    {
-        "nomeVar": "--corFonte",
-        "valores": ["#000000", "#ffffff"]
-    }
-];
 const mudarTema = () => {
     let indexCor;
     if (window.localStorage.getItem("tema") == "light") {
@@ -27,8 +17,8 @@ const mudarTema = () => {
         indexCor = 1;
     }
     mudarBotao();
-    variaveisCSS.forEach(variavel => {
-        rootHTML === null || rootHTML === void 0 ? void 0 : rootHTML.style.setProperty(variavel.nomeVar, variavel.valores[indexCor]);
+    temasVariaveisCSS.forEach(variavel => {
+        rootHTML === null || rootHTML === void 0 ? void 0 : rootHTML.style.setProperty(variavel.nomeVariavel, variavel.valores[indexCor]);
     });
 };
 const mudarBotao = () => {

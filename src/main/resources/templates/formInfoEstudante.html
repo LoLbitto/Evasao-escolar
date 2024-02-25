@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../javascript/formUtils.js" defer></script>
     <script src="../javascript/formInfoEstudante.js" defer></script>
+    <script src="../javascript/carregarPaleta.js" defer></script>
     <script src="../javascript/trocarTema.js" defer></script>
     <title>Solicitar Informações de um Estudante</title>
     <link rel="stylesheet" href="../css/estiloForm.css">
@@ -13,6 +14,8 @@
     <link rel="mask-icon" color="#000000" th:href="${maskicon}">
 </head>
 <body>
+    <paleta-comum style="display: none" th:attr="data-variaveis=${paletaComum}"></paleta-comum>
+    <paleta-tema-escuro style="display: none" th:attr="data-variaveis=${paletaTemaEscuro}"></paleta-tema-escuro>
     <header>
         <div id="titulo">
             <h1>Solicitar Informações de um Estudante</h1>
