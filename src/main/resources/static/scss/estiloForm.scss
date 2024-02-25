@@ -51,4 +51,9 @@ form {
     select {
         width: 100%;
     }
+
+    ::placeholder {
+        color: var(--corFonte);
+        opacity: 1;
+    }
 }

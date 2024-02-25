@@ -22,6 +22,7 @@
   padding: 0;
   box-sizing: border-box;
   background-color: var(--corFundo);
+  color: var(--corFonte);
 }
 
 form {
@@ -75,4 +76,8 @@ form div.seletor button, form div.grupoDeOpcoes button {
 }
 form select {
   width: 100%;
+}
+form ::placeholder {
+  color: var(--corFonte);
+  opacity: 1;
 }
