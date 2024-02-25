@@ -1,2 +1,31 @@
 @import "variaveisCSS";
 @import "estiloComum";
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        text-align: center;
+        width: 100%;
+        padding: .5em;
+    }
+
+    div {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 80%;
+
+        p {
+            grid-column: 1 / 3;
+            grid-row: 1;
+            text-align: center;
+            padding: .5em;
+        }
+
+        li {
+            list-style-type: none;
+        }
+    }
+}

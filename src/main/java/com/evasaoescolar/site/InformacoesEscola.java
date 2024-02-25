@@ -66,7 +66,7 @@ public class InformacoesEscola {
     private Contato contato;
     private EnvioDeInformacoes envioDeInformacoes;
     
-    public Contato geContato() {
+    public Contato getContato() {
         return contato;
     }
 

@@ -24,3 +24,28 @@
   background-color: var(--corFundo);
   color: var(--corFonte);
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main h1 {
+  text-align: center;
+  width: 100%;
+  padding: 0.5em;
+}
+main div {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 80%;
+}
+main div p {
+  grid-column: 1/3;
+  grid-row: 1;
+  text-align: center;
+  padding: 0.5em;
+}
+main div li {
+  list-style-type: none;
+}

@@ -9,7 +9,7 @@ import java.nio.file.Files;
 import java.io.File;
 import java.io.IOException;
 
-public class Configurador {
+public class Configuracao {
     private final String CAMINHO_LOGOS = "configuration/logos.json";
     private final String CAMINHO_INFORMACOES_ESCOLA = "configuration/informacoes_escola.json";
     private final String CAMINHO_PALETA = "configuration/paleta.json";
@@ -51,6 +51,8 @@ public class Configurador {
     public ModelMap configurarModelLogos(Logos logos, ModelMap model) {
         model.addAttribute("favicon", logos.getFavicon());
         model.addAttribute("maskicon", logos.getMaskIcon());
+        model.addAttribute("logo-dark", logos.getLogoDarkMode());
+        model.addAttribute("logo-light", logos.getLogoLightMode());
         
         return model;
     }

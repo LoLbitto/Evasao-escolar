@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,13 @@
     <link rel="stylesheet" href="../css/estiloContato.css">
     <link rel="shortcut icon" type="image/x-icon" th:href="${favicon}">
     <link rel="mask-icon" color="#000000" th:href="${maskicon}">
+    <script src="../javascript/contato.js" defer></script>
 </head>
+
 <body>
     <header>
         <div id="titulo">
-            <h1>Formas de Contato</h1>
+            <h1 id="nome" th:text="${nome}"></h1>
         </div>
         <nav>
             <div class="itemMenu">
@@ -37,7 +40,13 @@
         </nav>
     </header>
     <main>
-        <!--TODO: Fazer o texto da página de contato-->
+        <h1>Formas de Contato</h1>
+        <div id="formasContato">
+            <p>Endereço: <span id="endereco" th:text="${endereco}"></span></p>
+            <ul id="emails" th:attr="data-emails=${emails}"></ul>
+            <ul id="telefones" th:attr="data-telefones=${telefones}"></ul>
+        </div>
     </main>
 </body>
+
 </html>
