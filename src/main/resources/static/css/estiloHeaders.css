@@ -10,6 +10,7 @@ header div#titulo {
   grid-row: 1;
   padding: 0.7em;
   height: 100%;
+  background-color: var(--corFundoAlternativa);
 }
 header div#titulo a {
   grid-column: 1;
@@ -29,6 +30,8 @@ header div#titulo h1 {
   grid-column: 2;
   text-align: center;
   align-self: center;
+  background-color: var(--corFundoAlternativa);
+  color: var(--corFonteAlternativa);
 }
 header nav {
   display: flex;
@@ -59,14 +62,12 @@ header nav div button {
   text-decoration: none;
   width: 100%;
   padding: 0.2em;
-  color: #ffffff;
+  color: var(--corFonteAlternativa);
   font-size: var(--tamanhoFonteHeader);
 }
-header nav div a,
-header nav div a img,
+header nav div a, header nav div a img,
 header nav div button,
 header nav div button img {
-  height: 100%;
   background-color: var(--corFundoAlternativa);
 }
 header nav div a:hover,

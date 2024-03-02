@@ -1,19 +1,19 @@
 :root {
-  --corBorda: #2f9e41;
+  --corBorda: #1100fa;
   --corBordaAlternativa: #d4d4d4;
   --corFundo: #ffffff;
-  --corFundoAlternativa: #2f9e41;
+  --corFundoAlternativa: #1100fa;
   --corFonte: #000000;
   --corLink: #2fcaca;
   --corTituloDeGrupo: #696969;
-  --corFonteAlternativa: #413f3f;
-  --corHover: #cd191e;
+  --corFonteAlternativa: #ffffff;
+  --corHover: #fad300;
   --tamanhoFonteHeader: 1em;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --corFundo: #070707;
+    --corFundo: #000000;
     --corFonte: #ffffff;
   }
 }
@@ -21,8 +21,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--corFonte);
   background-color: var(--corFundo);
+  color: var(--corFonte);
 }
 
 form {
@@ -39,6 +39,10 @@ form div:not(.seletor):not(.grupoDeOpcoes) {
   border: solid var(--corBorda);
   border-radius: 0.7em;
   padding: 0.5em;
+}
+form div#email, form div#telefone {
+  position: absolute;
+  z-index: -1;
 }
 form input:not([type=radio]):not([type=checkbox]) {
   width: 100%;
@@ -72,4 +76,8 @@ form div.seletor button, form div.grupoDeOpcoes button {
 }
 form select {
   width: 100%;
+}
+form ::placeholder {
+  color: var(--corFonte);
+  opacity: 1;
 }

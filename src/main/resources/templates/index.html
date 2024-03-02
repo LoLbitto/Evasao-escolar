@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="dark light">
+    <script src="../javascript/carregarPaleta.js" defer></script>
     <script src="../javascript/trocarTema.js" defer></script>
-    <script src="../javascript/home.js" defer></script>
     <title>Prevenção à Evasão Escolar</title>
     <link rel="stylesheet" href="../css/estiloHome.css">
     <link rel="stylesheet" href="../css/estiloHeaders.css">
-    <link rel="shortcut icon" href="../logos/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" type="image/x-icon" th:href="${favicon}">
+    <link rel="mask-icon" color="#000000" th:href="${maskicon}">
 </head>
 
 <body>
+    <paleta-comum style="display: none" th:attr="data-variaveis=${paletaComum}"></paleta-comum>
+    <paleta-tema-escuro style="display: none" th:attr="data-variaveis=${paletaTemaEscuro}"></paleta-tema-escuro>
     <header>
         <div id="titulo">
-            <a href="index.html">
-                <img src="../logos/logoIF.png" alt="logo do Instituto Federal do Paraná" id="logo">
-            </a>
-            <h1>Projeto de Prevenção à Evasão Escolar</h1>
+            <h1>Prevenção à Evasão Escolar</h1>
         </div>
         <nav>
             <div class="itemMenu">
@@ -49,23 +49,22 @@
         </nav>
     </header>
     <main>
-        <p>Projeto de Pesquisa e Extensão proposto e orientado pelo professor Christiano do Carmo de Oliveira Maciel, que tem como objetivo reduzir as taxas de evasão escolar utilizando Java e <i>Fuzzy Logic</i>(lógica nebulosa) para identificar os estudantes mais propensos a evadirem a vida escolar. A entrada de informações  referentes a um estudante pode ser feita por uma instituição de ensino, pela família ou pelo estudante. Demais pessoas — além das mencionadas — não devem fazer o envio, pois são necessárias informações pessoais como nome completo, número de matrícula e renda familiar. 
+        <div id="forms">
+            <a href="formEstudantes.html" title="formulário para os estudantes">
+                ESTUDANTES
+            </a>
+            <a href="formEscola.html" title="formulário para o corpo docente">
+                CORPO DOCENTE
+            </a>
+            <a href="formInfoEstudante.html" title="solicitar informações de um estudante">
+                SOLICITAR INFORMAÇÔES
+            </a>
+        </div>
+        <p>Projeto que tem como objetivo reduzir as taxas de evasão escolar utilizando Java e <i>Fuzzy Logic</i>(lógica nebulosa) para identificar os estudantes mais propensos a evadirem a vida escolar. A entrada de informações  referentes a um estudante pode ser feita por uma instituição de ensino, pela família ou pelo estudante. Demais pessoas — além das mencionadas — não devem fazer o envio, pois são necessárias informações pessoais como nome completo, número de matrícula e renda familiar. 
         </p>
     </main>
-    <div id="forms" style="display: none;">
-        <a href="formEstudantes.html" title="formulário para os estudantes">
-            ESTUDANTES
-        </a>
-        <a href="formEscola.html" title="formulário para o corpo docente">
-            CORPO DOCENTE
-        </a>
-        <a href="formInfoEstudante.html" title="solicitar informações de um estudante">
-            SOLICITAR INFORMAÇÔES
-        </a>
-    </div>
     <footer>
-        <p>Projeto de Pesquisa e Extensão, que visa previnir a evasão escolar.</p>
-        <p>Professor Christiano do Carmo de Oliveira Maciel</p>
+        <p>Projeto que visa previnir a evasão escolar.</p>
     </footer>
 </body>
 

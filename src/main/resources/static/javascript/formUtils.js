@@ -1,4 +1,5 @@
 "use strict";
+var _a, _b, _c, _d, _e;
 const seletores = document.querySelectorAll(".seletor");
 const butoesFecharSeletor = document.querySelectorAll(".seletor button");
 const seletorRenda = document.querySelector("select[name=rendaFamiliar]");
@@ -23,10 +24,11 @@ const removerElementosPelaClasse = (classe) => {
 const valorDosRadio = (nomeRadio, textoDoInput = false) => {
     let radioInputs = document.querySelectorAll(`input[name=${nomeRadio}]`);
     let valor = "";
-    radioInputs?.forEach(radioInput => {
+    radioInputs === null || radioInputs === void 0 ? void 0 : radioInputs.forEach(radioInput => {
+        var _a;
         if (radioInput.checked) {
             if (textoDoInput) {
-                valor = radioInput.parentElement?.innerText;
+                valor = (_a = radioInput.parentElement) === null || _a === void 0 ? void 0 : _a.innerText;
             }
             else {
                 valor = radioInput.value;
@@ -141,21 +143,23 @@ const seletorUnidadeFedarativaCallback = () => {
     }));
     seletorCidadeCallback();
 };
-for (let i = 0; i < valoresMenus?.length; i++) {
+for (let i = 0; i < (valoresMenus === null || valoresMenus === void 0 ? void 0 : valoresMenus.length); i++) {
     valoresMenus[i].addEventListener("click", () => {
-        let show = seletores[i]?.style.display == "none";
+        var _a;
+        let show = ((_a = seletores[i]) === null || _a === void 0 ? void 0 : _a.style.display) == "none";
         if (show) {
             seletores[i].style.display = "flex";
             return;
         }
         seletores[i].style.display = "none";
     });
-    butoesFecharSeletor[i]?.addEventListener("click", () => seletores[i].style.display = "none");
-    seletores[i]?.addEventListener("click", () => {
+    (_a = butoesFecharSeletor[i]) === null || _a === void 0 ? void 0 : _a.addEventListener("click", () => seletores[i].style.display = "none");
+    (_b = seletores[i]) === null || _b === void 0 ? void 0 : _b.addEventListener("click", () => {
         valoresMenus[i].innerText = valorDosRadio(nomesRadio[i]) != "" ? valorDosRadio(nomesRadio[i], true) : valoresInciaisSeletores[i];
     });
-    caixasDeBusca[i]?.addEventListener("input", () => {
-        opcoesSeletores[i]?.forEach(opcao => {
+    (_c = caixasDeBusca[i]) === null || _c === void 0 ? void 0 : _c.addEventListener("input", () => {
+        var _a;
+        (_a = opcoesSeletores[i]) === null || _a === void 0 ? void 0 : _a.forEach(opcao => {
             if (opcao.innerText.toLowerCase().includes(caixasDeBusca[i].value.toLowerCase())) {
                 opcao.style.display = "block";
             }
@@ -169,8 +173,8 @@ for (let i = 0; i < valoresMenus?.length; i++) {
 if (valorDosRadio("UF")) {
     valoresMenus[0].innerText = valorDosRadio("UF", true);
 }
-butaoLimparForm?.addEventListener("click", limparForm);
-seletores[0]?.addEventListener("click", seletorUnidadeFedarativaCallback);
-seletores[1]?.addEventListener("click", seletorCidadeCallback);
+butaoLimparForm === null || butaoLimparForm === void 0 ? void 0 : butaoLimparForm.addEventListener("click", limparForm);
+(_d = seletores[0]) === null || _d === void 0 ? void 0 : _d.addEventListener("click", seletorUnidadeFedarativaCallback);
+(_e = seletores[1]) === null || _e === void 0 ? void 0 : _e.addEventListener("click", seletorCidadeCallback);
 seletorUnidadeFedarativaCallback();
 criarOpcoesRenda();

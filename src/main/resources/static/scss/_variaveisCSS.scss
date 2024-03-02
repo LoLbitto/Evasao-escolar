@@ -1,19 +1,19 @@
 :root {
-    --corBorda: #2f9e41;
+    --corBorda: #1100fa;
     --corBordaAlternativa: #d4d4d4;
     --corFundo: #ffffff;
-    --corFundoAlternativa: #2f9e41;
+    --corFundoAlternativa: #1100fa;
     --corFonte: #000000;
     --corLink: #2fcaca;
     --corTituloDeGrupo: #696969;
-    --corFonteAlternativa: #413f3f;
-    --corHover: #cd191e;
+    --corFonteAlternativa: #ffffff;
+    --corHover: #fad300;
     --tamanhoFonteHeader: 1em;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --corFundo: #070707;
+        --corFundo: #000000;
         --corFonte: #ffffff;
     }
 }

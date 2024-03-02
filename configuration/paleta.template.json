@@ -1,0 +1,18 @@
+{
+    "comum": {
+        "corBorda": "#1100FA",
+        "corBordaAlternativa": "#D4D4D4",
+        "corFundo": "#FFFFFF",
+        "corFundoAlternativa": "#1100FA",
+        "corFonte": "#000000",
+        "corFonteAlternativa": "#FFFFFF",
+        "corLink": "#2FCACA",
+        "corTituloGrupo": "#696969",
+        "corHover": "#FAD300",
+        "tamanhoFonteHeader": "1em"
+    },
+    "temaEscuro": {
+        "corFundo": "#000000",
+        "corFonte": "#FFFFFF"
+    }
+}

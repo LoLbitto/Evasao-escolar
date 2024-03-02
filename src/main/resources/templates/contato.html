@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="javascript/trocarTema.js" defer></script>
+    <script src="../javascript/carregarPaleta.js" defer></script>
+    <script src="../javascript/trocarTema.js" defer></script>
     <title>Formas de Contato</title>
     <link rel="stylesheet" href="../css/estiloHeaders.css">
     <link rel="stylesheet" href="../css/estiloContato.css">
-    <link rel="shortcut icon" href="../logos/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" type="image/x-icon" th:href="${favicon}">
+    <link rel="mask-icon" color="#000000" th:href="${maskicon}">
+    <script src="../javascript/contato.js" defer></script>
 </head>
+
 <body>
+    <paleta-comum style="display: none" th:attr="data-variaveis=${paletaComum}"></paleta-comum>
+    <paleta-tema-escuro style="display: none" th:attr="data-variaveis=${paletaTemaEscuro}"></paleta-tema-escuro>
     <header>
         <div id="titulo">
-            <a href="index.html">
-                <img src="../logos/logoIF.png" alt="logo do Instituto Federal do Paraná" id="logo">
-            </a>
-            <h1>Formas de Contato</h1>
+            <h1 id="nome" th:text="${nome}"></h1>
         </div>
         <nav>
             <div class="itemMenu">
@@ -39,7 +43,13 @@
         </nav>
     </header>
     <main>
-        <!--TODO: Fazer o texto da página de contato-->
+        <h1>Formas de Contato</h1>
+        <div id="formasContato">
+            <p>Endereço: <span id="endereco" th:text="${endereco}"></span></p>
+            <ul id="emails" th:attr="data-emails=${emails}"></ul>
+            <ul id="telefones" th:attr="data-telefones=${telefones}"></ul>
+        </div>
     </main>
 </body>
+
 </html>

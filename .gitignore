@@ -1,7 +1,11 @@
 node_modules
 package.json
 package-lock.json
+yarn.lock
 target
 .idea
 .vscode
 openjdk-20.0.2*
+configuration/informacoes_escola.json
+configuration/paleta.json
+configuration/logos.json

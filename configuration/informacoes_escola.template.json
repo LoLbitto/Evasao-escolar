@@ -1,0 +1,12 @@
+{
+    "contato": {
+        "nomeEscola": "placeholder",
+        "endereco": "exemplo, 123, Curitiba, Paraná",
+        "telefones": ["1234-5678"],
+        "emails": ["exemplo@exemplo.com"]
+    },
+    "envioDeInformacoes": {
+        "enviarPorEmail": true,
+        "email": ""
+    }
+}

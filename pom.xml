@@ -6,10 +6,10 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.1.3</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>com.evasaoescolar</groupId>
-	<artifactId>EvasaoEscolar</artifactId>
+	<artifactId>evasao-escolar</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>EvasaoEscolar</name>
 	<properties>
@@ -36,10 +36,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-        </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>2.0.31</version>
+		</dependency>
 		<dependency>
 			<groupId>net.source.jFuzzyLogic</groupId>
 			<artifactId>jFuzzyLogic</artifactId>
