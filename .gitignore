@@ -6,6 +6,6 @@ target
 .idea
 .vscode
 openjdk-20.0.2*
-configuration/informacoes_escola.json
-configuration/paleta.json
-configuration/logos.json
+site/configuration/informacoes_escola.json
+site/configuration/paleta.json
+site/configuration/logos.json

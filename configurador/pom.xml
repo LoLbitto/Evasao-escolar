@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.evasaoescolar</groupId>
+        <artifactId>evasao-escolar</artifactId>
+        <version>1.0</version>
+    </parent>
+    <artifactId>evasao-escolar-configurador</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+    <name>EvasaoEscolarConfigurador</name>
+    <properties>
+        <maven.compiler.release>20</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <configuration>
+                            <archive>
+                                <manifest>
+                                    <mainClass>
+                                        com.main.Main
+                                    </mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+            <version>2.0.31</version>
+        </dependency>
+    </dependencies>
+</project>

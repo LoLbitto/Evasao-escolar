@@ -1,0 +1,12 @@
+{
+    "contato": {
+        "nomeEscola": "IFPR - CAMPUS CURITIBA",
+        "endereco": "R. João Negrão, 1285 - Rebouças, Curitiba - PR, 80230-150",
+        "telefones": ["(41) 3535-1606"],
+        "emails": []
+    },
+    "envioDeInformacoes": {
+        "enviarPorEmail": true,
+        "email": ""
+    }
+}

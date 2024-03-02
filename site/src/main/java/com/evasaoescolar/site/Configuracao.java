@@ -2,7 +2,6 @@ package com.evasaoescolar.site;
 
 import com.alibaba.fastjson.JSON;
 import org.springframework.ui.ModelMap;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -12,9 +11,18 @@ import java.io.File;
 import java.io.IOException;
 
 public class Configuracao {
-    private final String CAMINHO_LOGOS = "configuration/logos.json";
-    private final String CAMINHO_INFORMACOES_ESCOLA = "configuration/informacoes_escola.json";
-    private final String CAMINHO_PALETA = "configuration/paleta.json";
+
+    private String caminhoLogos = "configuration/logos.json";
+    private String caminhoInformacoesEscola = "configuration/informacoes_escola.json";
+    private String caminhoPaleta = "configuration/paleta.json";
+
+    public Configuracao() {
+        if (System.getProperty("user.dir").contains("site")) {
+            caminhoLogos = "../" + caminhoLogos;
+            caminhoInformacoesEscola = "../" + caminhoInformacoesEscola;
+            caminhoPaleta = "../" + caminhoPaleta;
+        }
+    }
 
     private String lerArquivoJson(String filepath) {
         File jsonFile = new File(filepath);
@@ -36,9 +44,9 @@ public class Configuracao {
     @SuppressWarnings("unchecked")
     public ArrayList<Object> configurar() {
         Object[][] configuracoes = {
-            {lerArquivoJson(CAMINHO_LOGOS), Logos.class},
-            {lerArquivoJson(CAMINHO_INFORMACOES_ESCOLA), InformacoesEscola.class},
-            {lerArquivoJson(CAMINHO_PALETA), Paleta.class}
+            {lerArquivoJson(caminhoLogos), Logos.class},
+            {lerArquivoJson(caminhoInformacoesEscola), InformacoesEscola.class},
+            {lerArquivoJson(caminhoPaleta), Paleta.class}
         };
 
         var dados = new ArrayList<>();
