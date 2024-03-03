@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.evasaoescolar</groupId>
     <artifactId>evasao-escolar-site</artifactId>
-    <name>site</name>
+    <name>EvasaoEscolarWebsite</name>
     <version>1.0</version>
     <properties>
         <java.version>20</java.version>
@@ -52,6 +52,11 @@
             <version>1.0</version>
             <scope>system</scope>
             <systemPath>${basedir}/../lib/jFuzzyLogic.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.evasaoescolar</groupId>
+            <artifactId>evasao-escolar-logger</artifactId>
+            <version>1.0</version>
         </dependency>
     </dependencies>
 </project>

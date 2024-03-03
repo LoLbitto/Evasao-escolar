@@ -1,6 +1,7 @@
 package com.evasaoescolar.site;
 
 import com.alibaba.fastjson.JSON;
+import com.evasaoescolar.logger.JavaLogger;
 import org.springframework.ui.ModelMap;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -9,12 +10,14 @@ import java.util.LinkedHashMap;
 import java.nio.file.Files;
 import java.io.File;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 public class Configuracao {
 
     private String caminhoLogos = "configuration/logos.json";
     private String caminhoInformacoesEscola = "configuration/informacoes_escola.json";
     private String caminhoPaleta = "configuration/paleta.json";
+    private final Logger LOGGER = JavaLogger.getJavaLogger(Configuracao.class.getName());
 
     public Configuracao() {
         if (System.getProperty("user.dir").contains("site")) {
@@ -76,8 +79,7 @@ public class Configuracao {
                 valoresVariaveis.put(nome, (String) metodoVariavel.invoke(variaveisCSS));
             }
         } catch (SecurityException | NoSuchMethodException | IllegalArgumentException | IllegalAccessException | InvocationTargetException e) {
-            // TODO: Log erros
-            e.printStackTrace();
+            LOGGER.warning(e.getMessage());
         }
 
         return valoresVariaveis;

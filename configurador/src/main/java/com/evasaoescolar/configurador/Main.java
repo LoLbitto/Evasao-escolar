@@ -6,14 +6,17 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.evasaoescolar.configurador.informacoesescola.InformacoesEscola;
 import com.evasaoescolar.configurador.logos.Logos;
 import com.evasaoescolar.configurador.paleta.Paleta;
+import com.evasaoescolar.logger.JavaLogger;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedHashMap;
+import java.util.logging.Logger;
 
 public class Main {
 
+    private static final Logger LOGGER = JavaLogger.getJavaLogger(Main.class.getName());
     private static String pastaConfiguracoes = "configuration/";
     private static final InformacoesEscola INFORMACOES_ESCOLA = new InformacoesEscola();
     private static final Logos LOGOS = new Logos();
@@ -39,15 +42,15 @@ public class Main {
     private static void criarArquivoJSON(String caminhoArquivo, JSONObject informacoesJSON) {
         try {
             File file = new File(caminhoArquivo);
-            file.createNewFile();
+            LOGGER.info(String.valueOf(file.createNewFile()));
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.warning(e.getMessage());
         }
 
         try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(caminhoArquivo))) {
            JSON.writeJSONString(bufferedWriter, informacoesJSON, SerializerFeature.PrettyFormat);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.warning(e.getMessage());
         }
     }
 

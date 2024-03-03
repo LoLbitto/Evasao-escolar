@@ -4,6 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<modules>
 		<module>configurador</module>
+		<module>logger</module>
 		<module>site</module>
 	</modules>
 	<groupId>com.evasaoescolar</groupId>
@@ -13,6 +14,6 @@
 	<packaging>pom</packaging>
 	<properties>
 		<java.version>20</java.version>
-		<start-class>com.evasaoescolar.site.Main</start-class>
+		<start-class>com.evasaoescolar.site.com.evasaoescolar.logger.JavaLogger</start-class>
 	</properties>
 </project>
