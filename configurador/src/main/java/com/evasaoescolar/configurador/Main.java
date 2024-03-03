@@ -3,6 +3,9 @@ package com.evasaoescolar.configurador;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.evasaoescolar.configurador.informacoesescola.InformacoesEscola;
+import com.evasaoescolar.configurador.logos.Logos;
+import com.evasaoescolar.configurador.paleta.Paleta;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -12,19 +15,24 @@ import java.util.LinkedHashMap;
 public class Main {
 
     private static String pastaConfiguracoes = "configuration/";
-    private static final LinkedHashMap<String, JSONObject> baseInformacoesArquivos = new LinkedHashMap<>();
+    private static final InformacoesEscola INFORMACOES_ESCOLA = new InformacoesEscola();
+    private static final Logos LOGOS = new Logos();
+    private static final Paleta PALETA = new Paleta();
+    private static final LinkedHashMap<String, JSONObject> BASE_INFORMACOES_ARQUIVOS = new LinkedHashMap<>();
+
+    static {
+        BASE_INFORMACOES_ARQUIVOS.put("informacoes_escola.json", INFORMACOES_ESCOLA.pegarCamposAninhadosJSON());
+        BASE_INFORMACOES_ARQUIVOS.put("logos.json", LOGOS.pegarCamposJSON());
+        BASE_INFORMACOES_ARQUIVOS.put("paleta.json", PALETA.pegarCamposAninhadosJSON());
+    }
 
     public static void main(String[] args) {
-        baseInformacoesArquivos.put("informacoes_escola.json", InformacoesEscola.pegarCamposJSON());
-        baseInformacoesArquivos.put("logos.json", new Logos().pegarCamposJSON());
-        baseInformacoesArquivos.put("paleta.json", Paleta.pegarCamposJSON());
-
         if (System.getProperty("user.dir").contains("configurador")) {
             pastaConfiguracoes = "../" + pastaConfiguracoes;
         }
 
-        for (var nomeArquivo: baseInformacoesArquivos.keySet()) {
-            criarArquivoJSON(pastaConfiguracoes + nomeArquivo, baseInformacoesArquivos.get(nomeArquivo));
+        for (String nomeArquivo: BASE_INFORMACOES_ARQUIVOS.keySet()) {
+            criarArquivoJSON(pastaConfiguracoes + nomeArquivo, BASE_INFORMACOES_ARQUIVOS.get(nomeArquivo));
         }
     }
 

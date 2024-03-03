@@ -1,12 +1,9 @@
 package com.evasaoescolar.configurador;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-
 import java.lang.reflect.Field;
-import java.util.LinkedHashMap;
 
-public class InformacoesJSON {
+public abstract class InformacoesJSON {
 
     public JSONObject pegarCamposJSON() {
         JSONObject campos = new JSONObject();
